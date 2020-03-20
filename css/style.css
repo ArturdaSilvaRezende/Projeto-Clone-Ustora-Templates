@@ -1,0 +1,241 @@
+/* =============== reset =============== */
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =============== área do header superior =============== */
+
+.header-area {
+    background-color: #f4f4f4;
+    padding: 2px; 
+}
+
+.header-area nav ul {
+    display: flex;
+}
+
+.header-area nav ul li a {
+    display: block;
+    font-size: 13px;
+    margin-right: 5px;
+    padding: 10px;
+    color: #888;
+}
+
+.header-area nav ul li a:hover {
+    text-decoration: underline;
+    color: #439943;
+}
+
+.header-area .menu-dropdown ul .dropdown {
+    position: relative;
+}
+
+.header-area .menu-dropdown ul .dropdown-control .dropdown-itens-ul {
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 40px;
+    width: 100px;
+    background-color: #f4f4f4; 
+    display: none;
+    z-index: 1;
+}
+
+.header-area .menu-dropdown ul .dropdown-control:hover > .dropdown-itens-ul {
+    display: block;
+    position: absolute;
+    top: 50px;
+}
+
+@media screen and (max-width: 920px){
+    .header-area {
+        flex-direction: column;
+    }
+
+    .header-area .menu-principal ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-area .menu-dropdown ul {
+        justify-content: center;
+        margin-top: -15px;
+    }
+
+    .header-area .menu-dropdown ul .dropdown-control:hover > .dropdown-itens-ul {
+        top: 130px;
+    }
+}
+
+/* =============== header logo e cart =============== */
+
+.header-main {
+    position: relative;
+}
+
+.header-main .header-container .logo-ustora {
+    padding-bottom: 20px;
+}
+
+.header-main .header-container .area-cart {
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.header-main .header-container .area-cart {
+    position: relative;
+    cursor: pointer;
+}
+
+.header-main .header-container .area-cart a {
+    text-decoration: underline;
+    color: #439943;
+    font-size: 16px;
+}
+
+.header-main .header-container .area-cart span {
+    color: #5a88ca;
+}
+
+.header-main .header-container .area-cart img {
+    margin-left: 10px;
+}
+
+.header-main .header-container .circle {
+    background-color:#5a88ca;
+    color: #fff;
+    font-size: 13px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: -16px;
+    top: -20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.header-main .header-container .circle p {
+    text-align: center;
+    line-height: 30px;
+}
+
+@media screen and (max-width: 700px){
+   
+.header-main .header-container {
+    margin: 0 30px;
+}
+
+}
+
+/* =============== área do menu de navegação =============== */
+
+.header-menu {
+    background-color: #fbfbfb;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.nav-main {
+    margin: 0 auto 0 8%;
+}
+
+.nav-main ul{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.nav-main ul li a {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    padding: 20px;
+}
+.nav-main ul li a:hover {
+    text-decoration: underline;
+    color: #439943;
+}
+
+.header-menu .btn-menu {
+    margin: 0 auto;
+    border: 2px solid #ddd;
+    outline: none;
+}
+
+@media screen and (min-width: 957px) and (max-width: 1200px) {
+    .nav-main ul {
+       flex-direction: row;
+       justify-self: start;
+       margin: 0 auto 0 -6%;
+    }
+
+    .nav-main ul li a {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 960px) {
+
+    .nav-main ul {
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    .nav-main ul li a{
+        display: block;
+        text-align: center;
+    }
+
+    .header-main .header-menu nav ul li a {
+        font-size: 12px;
+    }
+
+}
+
+/* =============== área de promoções =============== */
+
+.area-promocoes {
+    background-color: #fbfbfb;
+}
+
+.area-promocoes .promocao-01 {
+    background-color:#5a88ca;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 0 10px 0;
+}
+
+.area-promocoes .promocao-01 p {
+    font-size: 20px;
+}
+
+.area-promocoes .promocao-01:hover {
+    background-color: #333;
+}
+
+
+
+
+
+
+
+
+

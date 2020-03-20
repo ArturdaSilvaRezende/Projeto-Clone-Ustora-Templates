@@ -1,0 +1,127 @@
+/* ======== carousel text ======== */
+
+.carousel-inner {
+    position: relative;
+}
+
+.carousel-inner > .carousel-item .text-carousel-1 {
+    position: absolute;
+    top: 100px;
+    right: 150px;
+}
+
+.carousel-inner > .carousel-item .text-carousel-1 h2 span {
+    color: #1bd172;
+}
+
+.carousel-inner > .carousel-item .text-carousel-1 p {
+    margin-top: -10px;
+}
+
+.carousel-inner > .carousel-item .text-carousel-1 .carousel-link-compra {
+    border: 1px solid #eaeaea;
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    cursor: pointer;
+}
+
+.carousel-inner > .carousel-item .text-carousel-1 .carousel-link-compra:hover {
+    background-color: rgba(89, 136, 201, 0.6);
+}
+
+.carousel-inner > .carousel-item .text-carousel-1 .carousel-link-compra a {
+    color: #333;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 700px) {
+    .carousel-inner > .carousel-item .text-carousel-1 {
+        position: absolute;
+        top: 20px;
+        right: 60px;
+    }
+
+    .carousel-inner > .carousel-item .text-carousel-1 h2 {
+        font-size: 20px;
+    }
+
+    .carousel-inner > .carousel-item .text-carousel-1 .carousel-link-compra {
+        font-size: 12px;
+        width: 130px;
+    }
+}
+
+/* ======== controladores do carousel ======== */
+
+.control-slides {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 170px;
+    left: 10px;
+    background-color: rgba(89, 136, 201, 0.6);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.control-style-1 {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+}
+
+.control-slides-2 {
+    background-color: rgba(89, 136, 201, 0.6);
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 170px;
+    right: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.control-style-2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+ }
+
+ .control-slides:hover {
+    background-color: #5a88ca;
+ }
+
+ .control-slides-2:hover {
+    background-color: #5a88ca;
+ }
+
+ @media screen and (max-width: 700px) {
+
+    #area-slide {
+        margin-top: 20px;
+    }
+
+    .control-slides, .control-slides-2 {
+        top: 50%;
+    }
+ }
+
+ .carousel-indicators li {
+     padding: 5px;
+     width: 10px !important;
+     height: 10px !important;
+     background-color: #3333339d !important;
+     border-radius: 50%;
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     
+ }
+
