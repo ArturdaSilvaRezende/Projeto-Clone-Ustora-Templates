@@ -10,6 +10,11 @@
     right: 150px;
 }
 
+.carousel-inner > .carousel-item .text-carousel-1 .mochila {
+    width: 300px;
+    font-size: 16px;
+}
+
 .carousel-inner > .carousel-item .text-carousel-1 h2 span {
     color: #1bd172;
 }
@@ -41,19 +46,39 @@
 }
 
 @media screen and (max-width: 700px) {
+
+    .carousel-item {
+        position: relative;
+    }
+
     .carousel-inner > .carousel-item .text-carousel-1 {
         position: absolute;
-        top: 20px;
-        right: 60px;
+        top: 0;
+        right: 40px;
     }
 
     .carousel-inner > .carousel-item .text-carousel-1 h2 {
-        font-size: 20px;
+        font-size: 16px;
+    }
+
+    .carousel-inner > .carousel-item .text-carousel-1 .mochila {
+        width: 200px;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+    }
+
+    
+    .carousel-inner > .carousel-item .text-carousel-1 .mochila p{
+        font-size: 11px;
     }
 
     .carousel-inner > .carousel-item .text-carousel-1 .carousel-link-compra {
-        font-size: 12px;
-        width: 130px;
+        font-size: 10px;
+        width: 120px;
+        position: absolute;
+        right: 10px;
+        top: 40px;
     }
 }
 
@@ -106,7 +131,7 @@
  @media screen and (max-width: 700px) {
 
     #area-slide {
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .control-slides, .control-slides-2 {
@@ -118,7 +143,7 @@
      padding: 5px;
      width: 10px !important;
      height: 10px !important;
-     background-color: #3333339d !important;
+     background-color: #5a88ca !important;
      border-radius: 50%;
      -webkit-border-radius: 50%;
      -moz-border-radius: 50%;

@@ -224,14 +224,6 @@ a {
     width: 24%;
 }
 
-.area-promocoes .promocao-01 p {
-    font-size: 20px;
-}
-
-.area-promocoes .promocao-01:hover {
-    background-color: #333;
-}
-
 .area-promocoes .promocao-02 {
     background: #ffd900;
     text-align: center;
@@ -240,14 +232,6 @@ a {
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px 0 10px 0;
     width: 24%;
-}
-
-.area-promocoes .promocao-02 p {
-    font-size: 20px;
-}
-
-.area-promocoes .promocao-02:hover {
-    background-color: #333;
 }
 
 .area-promocoes .promocao-03 {
@@ -260,14 +244,6 @@ a {
     width: 24%;
 }
 
-.area-promocoes .promocao-03 p {
-    font-size: 20px;
-}
-
-.area-promocoes .promocao-03:hover {
-    background-color: #333;
-}
-
 .area-promocoes .promocao-04 {
     background: #4abebd;
     text-align: center;
@@ -278,11 +254,11 @@ a {
     width: 24%;
 }
 
-.area-promocoes .promocao-04 p {
+.area-promocoes .promocao-01 p, .promocao-02 p, .promocao-03 p, .promocao-04 p {
     font-size: 20px;
 }
 
-.area-promocoes .promocao-04:hover {
+.area-promocoes .promocao-01:hover, .promocao-02:hover, .promocao-03:hover, .promocao-04:hover {
     background-color: #333;
 }
 
@@ -292,42 +268,20 @@ a {
         flex-wrap: wrap;
     }
 
-    .area-promocoes .container-promocoes .promocao-01 {
+    .area-promocoes .container-promocoes .promocao-01,  .container-promocoes .promocao-02 {
         width: 40%;
     }
 
-    .area-promocoes .promocao-01 p {
-        font-size: 16px;
-    }
-
-    .area-promocoes .container-promocoes .promocao-02 {
-        width: 40%;
-       
-    }
-
-    .area-promocoes .promocao-02 p {
-        font-size: 16px;
-    }
-
-    .area-promocoes .container-promocoes .promocao-03 {
+    .area-promocoes .container-promocoes .promocao-03, .container-promocoes .promocao-04 {
         width: 40%;
         margin-top: 20px;
     }
 
-    .area-promocoes .promocao-03 p {
-        font-size: 16px;
-    }
-
-    .area-promocoes .container-promocoes .promocao-04 {
-        width: 40%;
-        margin-top: 20px;
-    }
-
-    .area-promocoes .promocao-04 p {
+    .area-promocoes .promocao-01 p, .promocao-02 p, .promocao-03 p, .promocao-04 p {
         font-size: 16px;
     }
 }
-
+ 
 
 
 
