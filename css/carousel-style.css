@@ -139,14 +139,4 @@
     }
  }
 
- .carousel-indicators li {
-     padding: 5px;
-     width: 10px !important;
-     height: 10px !important;
-     background-color: rgba(237, 6, 245, 0.9) !important;
-     border-radius: 50%;
-     -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-     
- }
 

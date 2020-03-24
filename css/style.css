@@ -286,13 +286,14 @@ a {
 
 .produtos-recentes {
     position: relative;
+    margin-bottom: 5%;
 }
 
 .produtos-recentes .item img {
     border: 1px solid #ddd;
 }
 
-/* === controlador do background do carousel === */
+/* === background buttons === */
 
 .produtos-recentes .item {
     position: relative;
@@ -334,7 +335,7 @@ a {
     top: 30px;
 }
 
-.produtos-recentes .buttons-control .btn-anterior {
+.btn-anterior {
     margin-right: 10px;
     padding: 5px 10px;
     background-color: #fa8072;
@@ -347,7 +348,7 @@ a {
     -moz-border-radius: 10px;
 }
 
-.produtos-recentes .buttons-control .btn-proximo {
+.btn-proximo {
     padding: 5px 10px;
     background-color: #fa8072;
     color: #fff;
@@ -359,7 +360,7 @@ a {
     -moz-border-radius: 10px;
 }
 
-.produtos-recentes .buttons-control .btn-anterior:hover, .produtos-recentes .buttons-control .btn-proximo:hover {
+.btn-anterior:hover, .btn-proximo:hover {
     background-color: #333;
     color:#fff;
 }
@@ -375,9 +376,30 @@ a {
     }
 }
 
+/* =============== área das marcas =============== */
 
+.area-marcas {
+    border-top: 2px solid #eeeeee;
+    border-bottom: 2px solid #eeeeee;
+    margin-bottom: 5%;
+    position: relative;
+}
 
+.area-marcas .buttons-control-marks {
+    position: absolute;
+    top: 20px;
+    right: 130px;
+}
 
+@media screen and (max-width: 600px) {
+    
+    .area-marcas .buttons-control-marks {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+}
 
 
 
