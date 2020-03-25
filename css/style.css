@@ -401,6 +401,113 @@ a {
 
 }
 
+/* =============== área dos produtos mais vendidos =============== */
+
+.jumbotron .mais-vendidos-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.jumbotron-container {
+    display: flex;
+    align-items: stretch;
+}
+
+.jumbotron-container .jumbotron-box {
+    width: 50%;
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.jumbotron-container .jumbotron-box:hover {
+    background-color: rgba(62, 243, 7, 0.1);
+    color: #fff;
+}
+
+.jumbotron-container .jumbotron-box .jumbotron-box-internal {
+    text-align: center;
+}
+
+.jumbotron-container .jumbotron-box .jumbotron-box-internal p {
+    font-weight: bolder;
+}
+
+.jumbotron-container .jumbotron-box img {
+    display: block;
+    width: 50%;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1024px){
+    
+    .jumbotron-container {
+        flex-direction: column;
+    }
+
+    .jumbotron-container .jumbotron-box {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .jumbotron-container .jumbotron-box .jumbotron-box-internal {
+       margin: 0 auto;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: stretch;
+    }
+
+    .jumbotron-container .jumbotron-box .jumbotron-box-internal p {
+        font-size: 15px;
+     }
+
+     .jumbotron-container .jumbotron-box img {
+        width: 60%;
+    }
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 699px){
+    
+    .jumbotron-container {
+        flex-direction: column;
+    }
+
+    .jumbotron-container .jumbotron-box {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .jumbotron-container .jumbotron-box .jumbotron-box-internal {
+       margin: 0 auto;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: stretch;
+    }
+
+    .jumbotron-container .jumbotron-box .jumbotron-box-internal p {
+        font-size: 15px;
+     }
+
+     .jumbotron-container .jumbotron-box img {
+        width: 60%;
+    }
+
+    .jumbotron-container .jumbotron-box .jumbotron-box-internal .text-preco {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+     }
+
+}
+
 
 
 
