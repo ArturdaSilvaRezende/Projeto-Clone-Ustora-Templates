@@ -379,19 +379,21 @@ a {
 /* =============== área das marcas =============== */
 
 .area-marcas {
-    border-top: 2px solid #eeeeee;
-    border-bottom: 2px solid #eeeeee;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     position: relative;
 }
 
 .area-marcas .buttons-control-marks {
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 130px;
 }
 
 @media screen and (max-width: 600px) {
+
+    .area-marcas {
+        margin-top: 60px;
+    }
     
     .area-marcas .buttons-control-marks {
         position: absolute;
@@ -412,7 +414,6 @@ a {
 
 .jumbotron-container {
     display: flex;
-    align-items: stretch;
 }
 
 .jumbotron-container .jumbotron-box {
@@ -424,10 +425,12 @@ a {
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
+    transition: all 1s;
 }
 
 .jumbotron-container .jumbotron-box:hover {
     background-color: rgba(62, 243, 7, 0.1);
+    -webkit-transform: scale(1, 1.4);
 }
 
 .jumbotron-container .jumbotron-box .jumbotron-box-internal {
@@ -610,6 +613,35 @@ a {
     
 }
 
+/* =============== backdround title global // active class =============== */
+
+.area-title {
+    background: url('../img/crossword.png') repeat #5a88ca;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.area-title .h1-title {
+    padding-top: 10px;
+    color: #fff;
+    font-family: raleway;
+    font-size: 39pt;
+    font-weight: 200;
+}
+
+.menu-active {
+    background-color: #5a88ca;
+    padding: 10px;
+}
+
+.menu-active .menu-active-link {
+    color: #fff;
+}
+
+.menu-active .menu-active-link:hover {
+    text-decoration: underline;
+    color: #fff;
+}
 
 
 
