@@ -16,7 +16,7 @@
         content="Nosso modelo ustora apresenta produtos, novos produtos principais, produtos mais visualizados, produtos mais vendidos são exibidos no controle deslizante e por linha">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Artur">
-    
+
     <!-- estilo customizado -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carrinho.css">
@@ -159,13 +159,138 @@
 
     <main class="container cart-main-content">
 
-        <aside>
+        <aside class="aside-left mt-5">
 
-            <div>
+            <h2>Procurar Produtos</h2>
+
+            <div class="area-search">
+
+                <form class="form-search">
+                    <input type="search" placeholder="Procurando algo ?">
+                    <input type="button" value="Procurar">
+                </form>
 
             </div>
-            
+
+            <h2 class="mt-5">Produtos</h2>
+
+            <div class="box-propaganda mt-3 d-flex align-items-center">
+
+                <img src="img/product-1.jpg" alt="Samsumg Galax S5 2015">
+
+                <div class="box-propaganda-descricao">
+
+                    <a class="text-info" href="#">Samsumg Galax S5 2015</a>
+
+                    <p>
+                        <span><s>R$ 700,99</s> </span>
+                        <span class="text-info"> R$ 699,99</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="box-propaganda mt-4 d-flex align-items-center">
+
+                <img src="img/product-3.jpg" alt="Lg Neon 2015">
+
+                <div class="box-propaganda-descricao">
+
+                    <a class="text-info" href="#">Lg Neon 2015</a>
+
+                    <p>
+                        <span><s>R$ R$600,99</s> </span>
+                        <span class="text-info"> R$400,99</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="box-propaganda mt-4 d-flex align-items-center">
+
+                <img src="img/product-4.jpg" alt="Lg Neon 2015">
+
+                <div class="box-propaganda-descricao">
+
+                    <a class="text-info" href="#">Sony Microsoft</a>
+
+                    <p>
+                        <span><s>R$ R$450,99</s> </span>
+                        <span class="text-info"> R$400,99</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="box-propaganda mt-4 d-flex align-items-center">
+
+                <img src="img/product-5.jpg" alt="Lg Neon 2015">
+
+                <div class="box-propaganda-descricao">
+
+                    <a class="text-info" href="#">IPhone 6</a>
+
+                    <p>
+                        <span><s>R$ R$1399,99</s> </span>
+                        <span class="text-info"> R$1290,99</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <h2 class="mt-5"> Postagens Recentes</h2>
+
+            <div class="d-flex flex-column produtos-recentes">
+                <a class="text-info mt-3" href="#">Samsumg Galax S5 2015</a>
+                <a class="text-info" href="#">Lg Neon 2015</a>
+                <a class="text-info" href="#">Sony Microsoft</a>
+                <a class="text-info" href="#">IPhone 6</a>
+            </div>
+
         </aside><!-- conteúdo lateral -->
+
+        <section class="content-main pl-5 mt-5">
+
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Toltal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="area-table-interal"><button class="btn-table-main">X</button></th>
+                    <td><img src="img/apple_idad_9.7.png" alt="apple_idad_9.7"></td>
+                    <td class="area-table-interal-text">Apple Ipdad 9.7</td>
+                    <td class="area-table-interal-text">R$2999,99</td>
+                    <td class="area-table-interal-text"><input type="number" min="0" max="5" size="3"></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </section>
 
     </main><!-- main content -->
 
