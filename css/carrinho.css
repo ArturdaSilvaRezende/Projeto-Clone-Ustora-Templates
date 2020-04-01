@@ -1,23 +1,7 @@
-.cart-main-content {
-    display: grid;
-    grid-template-columns: 33.333% auto auto;
-    grid-template-rows: auto;
-}
-
-
-@media screen and (max-width: 1024px) {
-  
-    .cart-main-content {
-        grid-template-columns: 300px 400px auto;
-    }
-
-}
-
-
 /* =========== área do aside =========== */
 
 .aside-left {
-    grid-row: 1/span 4;
+    width: 100%;
 }
 
 .aside-left h2 {
@@ -26,14 +10,14 @@
     font-size: 20pt;
 }
 
-.form-search input[type=search]{
+.form-search input[type=search] {
     width: 73%;
     border: 1px solid #ddd;
     padding: 5px 10px;
     outline: none;
 }
 
-.form-search input[type=button]{
+.form-search input[type=button] {
     background-color: #5a88ca;
     padding: 6px 10px;
     border: none;
@@ -46,11 +30,11 @@
 
 ::-webkit-input-placeholder {
     color: #b4afaf;
- }
+}
 
- ::-ms-input-placeholder {
+::-ms-input-placeholder {
     color: #b4afaf;
- }
+}
 
 .box-propaganda img {
     width: 23%;
@@ -61,67 +45,29 @@
     padding: 10px;
 }
 
-@media screen and (min-width: 771px) and (max-width: 1024px) {
-
-    .aside-left {
-        grid-column: 1/span 3;
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .aside-left .aside-left-container-produtos {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .aside-left .aside-left-container-produtos .box-propaganda {
-        width: 300px;
-    }
-
-    .aside-left .aside-left-container-produtos img {
-        width: 60%;
-    }
-    
-}
-
-@media screen and (min-width: 380px) and (max-width: 770px) {
-
-    .cart-main-content {
-        grid-template-columns: auto auto;
-    }
-
-    .aside-left {
-        grid-column: 1/span 2;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .aside-left .aside-left-container-produtos {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .aside-left .aside-left-container-produtos .box-propaganda {
-        width: 300px;
-    }
-
-    .aside-left .aside-left-container-produtos img {
-        width: 60%;
-    }
-    
-}
-
 /* =========== área do content-main =========== */
-
-.content-table {
-    grid-column: 2/span 2;
-}
 
 /* área da tabela */
 
-.table tbody tr th .btn-table-main {
+.content-table {
+    width: 100%;
+}
+
+.content-table .table-produtos {
+    border: 1px solid #007bff;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.content-table .table-produtos td {
+    padding: 10px;
+    border: 1px solid #007bff;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.table-produtos tr td .btn-table-main {
     padding: 2px 3px;
     background-color: #5a88ca;
     color: #fff;
@@ -129,7 +75,7 @@
     border-radius: 7px;
 }
 
-.table tbody tr th .btn-table-main:hover {
+.table-produtos tr td .btn-table-main:hover {
     background-color: #000;
 }
 
@@ -141,7 +87,7 @@
     padding-top: 31px;
 }
 
-.table tbody tr td img {
+.content-table .table-produtos img {
     width: 90px;
     height: 60px;
 }
@@ -158,13 +104,13 @@
     font-weight: bold;
 }
 
-.finalizar-compra-area input[type=text]{
+.finalizar-compra-area input[type=text] {
     border: 1px solid #ddd;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0 5px;
 }
 
-.finalizar-compra-area input[type=button]{
+.finalizar-compra-area input[type=button] {
     padding: 5px 10px;
     background-color: #5a88ca;
     color: #fff;
@@ -175,42 +121,10 @@
     background-color: #000;
 }
 
-@media screen and (min-width: 771px) and (max-width: 1024px) {
-
-    .cart-main-content {
-        grid-template-columns: 300px 200px;
-    }
-
-    .content-table {
-        grid-column: 1/span 3;
-        width: 100%;
-        margin: 20px auto;
-
-    }
-
-}
-
-@media screen and (min-width: 380px) and (max-width: 770px) {
-
-    .cart-main-content {
-        grid-template-columns: 100px;
-    }
-
-    .content-table {
-        grid-column: 1/span 2;
-        width: 50%;
-    }
-
-    .content-table .table-produtos {
-        width: 100%;
-    }
-
-}
-
 /* =========== totais do carrinho =========== */
 
 .totais-carrinho {
-    grid-column: 2/span 3;
+    width: 100%;
 }
 
 .totais-carrinho .total-carrinho-table {
@@ -223,7 +137,7 @@
     padding: 10px;
     text-align: center;
     vertical-align: middle;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .totais-carrinho .total-carrinho-table .td-left {
@@ -255,3 +169,90 @@
     width: 200px;
 }
 
+.totais-carrinho .box-subtotal {
+    width: 270px;
+}
+
+@media screen and (min-width: 759px) and (max-width: 1024px) {
+    main {
+        flex-direction: column;
+    }
+    .aside-left {
+        order: 2;
+        margin-top: 10%;
+    }
+    .aside-left .aside-left-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+   
+    .cart-content-container .content-table {
+        order: 1;
+    }
+    .cart-content-container .content-table .finalizar-compra-area {
+        justify-content: start;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 760px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .aside-left {
+        order: 2;
+        margin-top: 10%;
+    }
+    
+     /* área da tabela */
+
+    .cart-content-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .cart-content-container .content-table {
+        order: 1;
+        margin-top: -10px;
+    }
+    .cart-content-container .content-table .table-produtos tr td {
+        font-size: 11px;
+    }
+    .cart-content-container .content-table .table-produtos tr td img {
+        width: 100%;
+    }
+
+    /* totais do carrinho */
+
+    .totais-carrinho {
+        position: relative;
+    }
+
+    .totais-carrinho .totais-carrinho-container .totais-box {
+        order: 2;
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 30px;
+        margin: 10% 0;
+    }
+    .totais-carrinho .totais-carrinho-container .box-subtotal {
+        order: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10%;
+        border-bottom: 1px solid #007bff;
+        padding-bottom: 20px;
+    }
+    .totais-carrinho .totais-carrinho-container {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    .totais-carrinho .title-toais-box {
+        position: absolute;
+        bottom: 330px;
+    }
+}

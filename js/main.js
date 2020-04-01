@@ -131,7 +131,7 @@ $(document).ready(function () {
 });
 
 
-//O bloco de código abaixo faz o calculo do total da quantidade dos produtos na tabela (carrinho.html)
+//O bloco de código abaixo faz o calculo do total da quantidade dos produtos na tabela do arquivo (carrinho.html)
 
 function calc_total() {
 
@@ -139,11 +139,14 @@ function calc_total() {
     table_produto.addEventListener("input", calc_total);
 
     var qtd = Number(document.querySelector(".cQtd").value.replace(",", "."));
-    tot = qtd * 2999, 99;
+    tot = qtd * 1999, 99;
     document.querySelector(".total").value = "R$ " + tot;
 }
 
 calc_total();
+
+
+//O bloco de código abaixo controla o show e hide do 'calcular remessa' do arquivo (carrinho.html)
 
 $(document).ready(function(){
 
@@ -152,6 +155,7 @@ $(document).ready(function(){
 
     calc_remessa.click(function(){
         $('.area-remessa').slideToggle(1000);
+        return false;
     });
 
 });
