@@ -1,0 +1,81 @@
+.area-shop-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.area-shop-container .area-shop-box {
+    width: 23%;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.area-shop-container .area-shop-box:last-child {
+    margin-right: 0;
+}
+
+.area-shop-container .area-shop-box img {
+    width: 100%;
+}
+
+.area-shop-container .area-shop-box .btn-container button {
+    padding: 5px 10px;
+    width: 120px;
+    margin-left: 10px;
+    font-size: 13px;
+    background-color: #5a88ca;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+.area-shop-container .area-shop-box .btn-container button:first-child {
+    margin-top: -20px;
+}
+
+.area-shop-container .area-shop-box .btn-container button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.area-shop-container .area-shop-box>h5 {
+    color: #007bff;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .area-shop-container {
+        justify-content: center;
+    }
+    .area-shop-container .area-shop-box {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 992px) {
+    .area-shop-container {
+        justify-content: center;
+    }
+    .area-shop-container .area-shop-box {
+        width: 46%;
+        padding: 20px;
+    }
+    .area-shop-container .area-shop-box>h5 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 700px) {
+    .area-shop-container {
+        justify-content: center;
+        width: 100%;
+    }
+    .area-shop-container .area-shop-box {
+        width: 40%;
+        margin-right: 20px;
+    }
+    .area-shop-container .area-shop-box>h5 {
+        font-size: 15px;
+    }
+}
