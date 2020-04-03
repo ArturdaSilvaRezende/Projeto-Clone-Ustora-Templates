@@ -32,22 +32,6 @@ function cart_efeito_hover() {
 
 cart_efeito_hover();
 
-
-//O bloco de código abaixo faz o calculo do total da quantidade dos produtos na tabela do arquivo (carrinho.html)
-
-function calc_total() {
-
-    var table_produto = document.querySelector(".table-produtos");
-    table_produto.addEventListener("input", calc_total);
-
-    var qtd = Number(document.querySelector(".cQtd").value.replace(",", "."));
-    tot = qtd * 1999, 99;
-    document.querySelector(".total").value = "R$ " + tot;
-}
-
-calc_total();
-
-
 //O bloco de código abaixo controla o show e hide do 'calcular remessa' do arquivo (carrinho.html)
 
 $(document).ready(function(){
@@ -61,3 +45,53 @@ $(document).ready(function(){
     });
 
 });
+
+//O bloco de código abaixo controla a mudança de imagem do container 'single-product-container' do arquivo produtis-unicos.html
+
+$(document).ready(function(){
+
+    
+    var img_main = $('.img-main');
+    var img_galery_01 = $('.img-galery-01');
+    var img_galery_02 = $('.img-galery-02');
+    var img_galery_03 = $('.img-galery-03');
+    var img_galery_04 = $('.img-galery-04');
+    
+    //img-galery-01
+    img_galery_01.mouseenter(function(){
+        img_main.attr('src', '../img/iphone11-a.jpg');
+    });
+
+    img_galery_01.mouseleave(function(){
+        img_main.attr('src', '../img/iphone-11-pro-no-white.png');
+    });
+
+    //img-galery-02
+    img_galery_02.mouseenter(function(){
+        img_main.attr('src', '../img/iphone11-b.jpg');
+    });
+
+    img_galery_02.mouseleave(function(){
+        img_main.attr('src', '../img/iphone-11-pro-no-white.png')
+    });
+
+    //img-galery-03
+    img_galery_03.mouseenter(function(){
+        img_main.attr('src', '../img/iphone11-c.jpg');
+    });
+
+    img_galery_03.mouseleave(function(){
+        img_main.attr('src', '../img/iphone-11-pro-no-white.png')
+    });
+
+     //img-galery-04
+     img_galery_04.mouseenter(function(){
+        img_main.attr('src', '../img/iphone11-d.jpg');
+    });
+
+    img_galery_04.mouseleave(function(){
+        img_main.attr('src', '../img/iphone-11-pro-no-white.png')
+    });
+    
+});
+
