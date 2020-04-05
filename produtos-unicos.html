@@ -32,9 +32,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant&display=swap">
 
-      <!-- owl carousel -->
-      <link rel="stylesheet" href="node_modules/owlCarousel/dist/assets/owl.carousel.min.css">
-      <link rel="stylesheet" href="node_modules/owlCarousel/dist/assets/owl.theme.default.min.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="node_modules/owlCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="node_modules/owlCarousel/dist/assets/owl.theme.default.min.css">
 
     <!-- favicon -->
     <link rel="icon" href="favicon.png">
@@ -137,7 +137,7 @@
         <div class="navbar navbar-expand-lg header-menu">
 
             <button class="navbar-toggler btn-menu" type="button" data-toggle="collapse" data-target="#nav-main""
-                aria-controls=" nav-main" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="nav-main" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
 
@@ -163,22 +163,26 @@
         <h1 class="h1-title">Produtos Únicos</h1>
     </div><!-- backdround title -->
 
-    <main class="container mt-5 d-flex justify-content-between mb-5">
+    <main class="container mt-5 d-flex justify-content-between">
 
-        <aside class="aside-left mr-5">
+        <aside class="aside-left mr-5" id="aside-left">
 
-            <h2>Procurar Produtos</h2>
+            <div id="area-search">
 
-            <div class="area-search">
+                <h2>Procurar Produtos</h2>
 
-                <form class="form-search">
-                    <input type="search" placeholder="Procurando algo ?">
-                    <input type="button" value="Procurar">
-                </form>
+                <div class="area-search">
+
+                    <form class="form-search">
+                        <input type="search" placeholder="Procurando algo ?">
+                        <input type="button" value="Procurar">
+                    </form>
+
+                </div>
 
             </div>
 
-            <h2 class="mt-5">Produtos</h2>
+            <h2>Produtos</h2>
 
             <div class="aside-left-container">
 
@@ -252,15 +256,6 @@
 
             </div>
 
-            <h2 class="mt-5"> Postagens Recentes</h2>
-
-            <div class="d-flex flex-column produtos-recentes">
-                <a class="text-info mt-3" href="#">Samsumg Galax S5 2015</a>
-                <a class="text-info" href="#">Lg Neon 2015</a>
-                <a class="text-info" href="#">Sony Microsoft</a>
-                <a class="text-info" href="#">IPhone 6</a>
-            </div>
-
         </aside><!-- conteúdo lateral -->
 
         <section class="single-product-container">
@@ -269,26 +264,178 @@
 
                 <div class="product-image-main">
                     <img class="img-main" src="img/iphone-11-pro-no-white.png" alt="iphone-11-pro-no-white.png">
-                </div>
+                </div><!-- img-main-área -->
 
                 <div class="product-image-galery d-flex align-items-center">
-                    
+
                     <img class="img-galery-01" src="img/iphone11-a.jpg" alt="iphone-11-pro-no-white-a.png">
                     <img class="img-galery-02" src="img/iphone11-b.jpg" alt="iphone-11-pro-no-white-b.png">
                     <img class="img-galery-03" src="img/iphone11-c.jpg" alt="iphone-11-pro-no-white-c.png">
                     <img class="img-galery-04" src="img/iphone11-d.jpg" alt="iphone-11-pro-no-white-d.png">
 
+                </div><!-- galeria de imagens -->
+
+            </div>
+
+        </section><!-- galeria de imagens do produto -->
+
+        <section class="description-product-container">
+
+            <div class="title-description">
+
+                <h3>
+                    <a href="#">iphone 11 pro no white</a>
+                </h3>
+
+                <p class="text-info text-preco">
+                    <span class="text-dark"><s>$8999,99</s></span>
+                    R$7999,99
+                </p>
+
+            </div><!-- titile description -->
+
+            <form class="add-cart">
+                <input type="number" min="0" max="5">
+                <input type="button" value="Adicionar no carrinho">
+            </form><!-- add-cart-área -->
+
+            <ul class="nav nav-pills mb-3 mt-5" id="pills-tab" role="tablist">
+
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                        aria-controls="pills-home" aria-selected="true">Descrição</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">avaliações</a>
+                </li>
+
+            </ul><!-- navpills -->
+
+            <div class="tab-content" id="pills-tabContent">
+
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <p class="text-dark text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
+                        ab. Nesciunt perspiciatis quidem iure amet aliquid quae placeat ipsa nobis tempore voluptas,
+                        doloremque provident adipisci consequatur quibusdam? Magni, repellat aliquam.</p>
+                </div>
+
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                    <form>
+
+                        <div class="form-group">
+                            <label for="cText">Nome</label>
+                            <input type="text" class="form-control" id="cText" placeholder="Informe seu nome">
+                        </div>
+
+                        <div class="form-group pt-2 pb-2">
+                            <label for="cMail">Email</label>
+                            <input type="email" class="form-control" id="cMail" placeholder="name@example.com">
+                        </div>
+
+                        <div class="form-group pt-2 pb-2">
+
+                            <label>Seu Ranking</label>
+
+                            <p class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+
+                        </div>
+
+                        <div class="form-group add-cart ">
+
+                            <label for="cTextArea">Suas Avaliações</label>
+                            <textarea class="form-control" id="cTextArea" rows="3"></textarea>
+                            <input class="mt-3" type="button" value="Enviar">
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div><!-- navpills content -->
+
+        </section><!-- descrição do produto -->
+
+    </main><!-- main content -->
+
+    <section class="mt-5 produtos-recentes container" id="produtos-relacionados">
+        <h1 class="text-left text-info p-3 title-produtos-recentes">Produtos Relacionados</h1>
+
+        <div class="owl-carousel owl-theme produtos-recomendados-carousel">
+
+            <div class="item">
+                <img src="img/product-1.jpg" alt="Samsumg Galax S5 2015">
+                <h5 class="mt-1 text-center">Samsumg Galax S5 2015</h5>
+                <p class="text-center text-primary">R$700,00 <span class="text-dark"><s>R$800,00</s></span></p>
+
+                <div class="btn-container">
+                    <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                    <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/product-2.jpg" alt="Nokia lumia 1320">
+                <h5 class="mt-1 text-center">Nokia lumia 1320</h5>
+                <p class="text-center text-primary">R$899,99 <span class="text-dark"><s>R$999,99</s></span></p>
+
+                <div class="btn-container">
+                    <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                    <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/product-3.jpg" alt="Lg Neon 2015">
+                <h5 class="mt-1 text-center">Lg Neon 2015</h5>
+                <p class="text-center text-primary">R$400,99 <span class="text-dark"><s>R$500,99</s></span></p>
+
+                <div class="btn-container">
+                    <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                    <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/product-4.jpg" alt="Sony Microsoft">
+                <h5 class="mt-1 text-center">Sony Microsoft</h5>
+                <p class="text-center text-primary">R$400,00 <span class="text-dark"><s>R$450,99</s></span></p>
+
+                <div class="btn-container">
+                    <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                    <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/product-5.jpg" alt="IPhone 6">
+                <h5 class="mt-1 text-center">IPhone 6</h5>
+                <p class="text-center text-primary">R$1200,99 <span class="text-dark"><s>R$1399,99</s></span></p>
+
+                <div class="btn-container">
+                    <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                    <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
                 </div>
 
             </div>
 
-        </section>
-
-        <div>
-            aa
         </div>
 
-    </main><!-- main content -->
+        <div class="buttons-control">
+            <input class="btn-anterior" id="btn-anterior" type="button" value="Anterior">
+            <input class="btn-proximo" id="btn-proximo" type="button" value="Próximo">
+        </div>
+
+
+    </section><!-- produtos relacionados slideshow -->
 
     <footer class="footer pt-5">
 

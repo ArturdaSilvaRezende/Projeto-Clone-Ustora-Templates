@@ -181,6 +181,10 @@
         order: 2;
         margin-top: 10%;
     }
+    .aside-left .box-propaganda {
+        width: 50%;
+    }
+
     .aside-left .aside-left-container {
         display: flex;
         flex-wrap: wrap;

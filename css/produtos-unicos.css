@@ -1,13 +1,14 @@
+/* ================ contaiter img ================ */
+
 .single-product-container {
     width: 100%;
 }
 
 .single-product-container .product-image .product-image-main img {
-    width: 30%;
+    width: 50%;
 }
 
-
-.single-product-container .product-image  {
+.single-product-container .product-image {
     width: 100%;
 }
 
@@ -21,7 +22,7 @@
 }
 
 .single-product-container .product-image .product-image-galery img {
-    width: 25%;
+    width: 34%;
     margin: 0px 10px 0px 0px;
     border: 1px solid #b8b3b3;
     padding: 5px;
@@ -30,4 +31,99 @@
     -moz-border-radius: 7px;
 }
 
+/* ================ descrição do produto área ================ */
 
+.description-product-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+.add-cart input[type=button] {
+    background-color: #5a88ca;
+    padding: 6px 10px;
+    border: none;
+    color: #fff;
+}
+
+.add-cart input[type=button]:hover {
+    background-color: #000;
+}
+
+.description-product-container .add-cart input[type=number] {
+    padding: 4px 4px;
+}
+
+@media screen and (min-width: 780px) and (max-width: 1024px) {
+    /* contaiter img */
+    .single-product-container {
+        margin: 0 auto;
+        margin-top: 80px;
+    }
+    .single-product-container .product-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .single-product-container .product-image .product-image-main img {
+        width: 100%;
+    }
+    .single-product-container .product-image .product-image-galery img {
+        width: 20%;
+        margin: 0 auto;
+    }
+    #aside-left {
+        margin-top: -10px;
+    }
+    /* descrição dos produtos área */
+    .description-product-container {
+        width: 40%;
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    /* área search */
+    main {
+        position: relative;
+    }
+    #area-search {
+        position: absolute;
+        top: -30px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 781px) {
+    /* contaiter img */
+    .description-product-container {
+        margin-top: 20px;
+    }
+    .single-product-container {
+        margin: 0 auto;
+        margin-top: 70px;
+    }
+    /* área search */
+    main {
+        position: relative;
+    }
+    #area-search {
+        position: absolute;
+        top: -30px;
+    }
+}
+
+/* ================ produtos relacionados ================ */
+
+#produtos-relacionados h5 {
+    font-size: 14px;
+}
+
+#produtos-relacionados .btn-container {
+    width: 100%;
+}
+
+#produtos-relacionados .btn-container button {
+    font-size: 10px;
+}
