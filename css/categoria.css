@@ -1,0 +1,210 @@
+/* ========== aside área ========== */
+
+
+/* form search */
+
+.aside-left {
+    width: 50%;
+}
+
+.aside-left h2 {
+    color: #fead53;
+    text-transform: uppercase;
+    font-size: 14pt;
+}
+
+.aside-left .form-search input[type=search] {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    width: 70%;
+    outline: none;
+}
+
+.aside-left .form-search input[type=button] {
+    background-color: #5a88ca;
+    padding: 6px 10px;
+    border: none;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.aside-left .form-search input[type=button]:hover {
+    background-color: #000;
+}
+
+::-webkit-input-placeholder {
+    color: #b4afaf;
+}
+
+::-ms-input-placeholder {
+    color: #b4afaf;
+}
+
+/* categorias dos produtos */
+
+.categoria-produtos {
+    padding: 15px;
+    background-color: #192020;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.categoria-produtos li {
+    margin-bottom: 15px;
+}
+
+.categoria-produtos li a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.categoria-produtos li a:hover {
+    color: #a82c2c;
+}
+
+/* marcas dos produtos */
+
+.categoria-marcas {
+    padding: 15px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.categoria-marcas li a {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.categoria-marcas li a:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.categoria-marcas li a img {
+    width: 150px;
+   
+}
+
+/* ========== produtos relacionados ========== */
+
+.categoria-main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.categoria-main-container .categoria-produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.categoria-main-container .categoria-produtos-container .categoria-produtos-box {
+    text-align: center;
+    width: 33%;
+    margin-top: 20px;
+}
+
+.categoria-produtos-box:first-child {
+    margin-top: 0;
+}
+
+.categoria-main-container .categoria-produtos-container .categoria-produtos-box .btn-container button {
+    padding: 5px 10px;
+    width: 120px;
+    margin-left: 10px;
+    font-size: 13px;
+    background-color: #5a88ca;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+.categoria-main-container .categoria-produtos-container .categoria-produtos-box .btn-container button:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.categoria-main-container .categoria-produtos-container .categoria-produtos-box h5 {
+    color: #007bff;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1024px){
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .aside-left {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .categoria-produtos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .categoria-produtos li {
+        padding: 10px;
+        margin-left: 30px;
+    }
+
+    .categoria-produtos li a{
+       font-size: 14px;
+    }
+
+    .categoria-marcas {  
+       flex-direction: row; 
+    }
+    
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023px){
+
+    .categoria-produtos {
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .categoria-produtos li {
+        padding: 0px;
+        margin-left: 10px;
+    }
+
+    .categoria-produtos li a {
+        font-size: 15px;
+    }
+
+    .categoria-marcas {
+        flex-wrap: wrap;
+     }
+
+     .categoria-main-container {
+         margin-top: 5%;
+     }
+
+     .categoria-main-container .categoria-produtos-container .categoria-produtos-box {
+        width: 50%;
+     }
+
+     .categoria-main-container .categoria-produtos-container .categoria-produtos-box h5 {
+         font-size: 16px;
+     }
+
+}

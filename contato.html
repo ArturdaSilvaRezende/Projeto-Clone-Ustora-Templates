@@ -19,7 +19,6 @@
 
     <!-- estilo customizado -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/checkout.css">
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -142,10 +141,9 @@
                     <li><a href="shop.html">Shopping</a></li>
                     <li><a href="produtos-unicos.html">Produtos Únicos</a></li>
                     <li><a href="carrinho.html">Carrinho</a></li>
-                    <li class="menu-active"><a class="menu-active-link" href="checkout.html">Verificação de Saída</a>
-                    </li>
-                    <li><a href="">Categoria</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="checkout.html">Verificação de Saída</a></li>
+                    <li><a href="categoria.html">Categoria</a></li>
+                    <li class="menu-active"><a class="menu-active-link" href="contato.html">Contato</a></li>
                 </ul>
             </nav>
 
@@ -154,12 +152,78 @@
     </header><!-- área de navegação do cabeçalho -->
 
     <div class="area-title">
-        <h1 class="h1-title">Verificação de Saída</h1>
+        <h1 class="h1-title">Fale Conosco</h1>
     </div><!-- backdround title -->
 
     <main class="container d-flex justify-content-between mb-5 mt-5 main-content">
 
-       
+        <section class="fale-conosco-container w-75 m-auto">
+
+            <div class="mt-1">
+
+                <h4 class="mb-5  text-info text-center">Atendê-lo bem e gerar resultados para a sua empresa são especialidades da Projetual.
+                    Entre em contato e venha tomar um café conosco.</h4>
+
+                <form>
+
+                    <!-- nome // sobrenome -->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="cPrimeiroNome">* Primeiro Nome</label>
+                            <input type="text" class="form-control" id="cPrimeiroNome" placeholder="Seu primeiro nome"
+                                maxlength="15">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="cSobreNome">* Sobrenome</label>
+                            <input type="text" class="form-control" id="cSobreNome" placeholder="Sobrenome completo">
+                        </div>
+                    </div>
+
+                    <!-- email -->
+                    <div class="form-group">
+                        <label for="cEmail">* Email </label>
+                        <input type="text" class="form-control" id="cEmail" placeholder="example@example.com">
+                    </div>
+
+                    <!-- telefone para contato -->
+                    <div class="form-row">
+
+                        <div class="form-group col-md-6">
+                            <label for="cTelefone">Telefone Fixo </label>
+                            <input type="text" class="form-control" id="cTelefone" placeholder="(62)9999-9999">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="cCelular">* Celular </label>
+                            <input type="text" class="form-control" id="cCelular" placeholder="(62)99999-9999">
+                        </div>
+
+                    </div>
+
+                    <!-- mensagem área -->
+                    <div class="form-row">
+
+                        <div class="form-group col-md-6">
+                            <label for="cAssunto">* Assunto </label>
+                            <input type="text" class="form-control" id="cAssunto" placeholder="Assunto/motivo do seu contato">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="cMensagem">* Mensagem </label>
+                            <textarea class="form-control" id="cMensagem" placeholder="Sua mensagem aqui"></textarea>
+                        </div>
+
+                    </div>
+
+                    <p>* Campos de Preenchimento Obrigatório</p>
+                    <button type="submit" class="btn btn-info mt-3">Enviar</button>
+
+                </form>
+
+            </div><!-- formulário fale conosco -->
+
+        </section>
+
     </main>
 
     <footer class="footer pt-5">

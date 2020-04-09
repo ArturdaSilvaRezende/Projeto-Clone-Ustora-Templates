@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<!--
+	Projeto clone ustora, by freshdesignweb.com
+	Twitter: https://twitter.com/freshdesignweb
+	URL: https://www.freshdesignweb.com/ustora/
+-->
+<html lang="pt-br">
+
+<head>
+    <title>Clone Ustora Projeto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="loja digital, loja de telefones, loja de acessórios">
+    <meta name="description"
+        content="Nosso modelo ustora apresenta produtos, novos produtos principais, produtos mais visualizados, produtos mais vendidos são exibidos no controle deslizante e por linha">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Artur">
+
+    <!-- estilo customizado -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/categoria.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+    <!-- google fontes -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant&display=swap">
+
+    <!-- favicon -->
+    <link rel="icon" href="favicon.png">
+
+    <!-- html5shiv -->
+    <script src="node_modules/html5shiv-master/dist/html5shiv.js"></script>
+    <script src="node_modules/html5shiv-master/dist/html5shiv-printshiv.js"></script>
+</head>
+
+<body>
+
+    <header class="header-area">
+        <div class="container d-md-flex justify-content-between align-items-center mt-md-3">
+
+            <nav class="menu-principal">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fas fa-sign-out-alt"></i> Entrar</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-heart"></i> Lista de Desejo</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-cart-plus"></i> Meu Carrinho</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Verificação de Saída</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-user"></i> Minha Conta</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="menu-dropdown">
+                <ul>
+                    <li class="dropdown-control">
+                        <a href="#">Moeda: USD</a>
+                        <ul class="dropdown-itens-ul">
+                            <li>
+                                <a href="">USD</a>
+                            </li>
+                            <li>
+                                <a href="">INR</a>
+                            </li>
+                            <li>
+                                <a href="">GBP</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-control">
+                        <a href="#">Idioma: Inglês</a>
+                        <ul class="dropdown-itens-ul">
+                            <li>
+                                <a href="">Inglês</a>
+                            </li>
+                            <li>
+                                <a href="">Francês</a>
+                            </li>
+                            <li>
+                                <a href="">Alemão</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header><!-- área do cabeçalho superior -->
+
+    <header class="header-main">
+
+        <div class="container mt-4">
+            <div class="header-container d-flex justify-content-between align-items-center">
+
+
+                <a href="index.html" class="logo-ustora">
+                    <img src="img/logo.png" alt="ustora-logo-index">
+                </a>
+
+
+                <div class="area-cart d-flex justify-content-center align-items-center">
+
+                    <h4 class="cart-title">
+                        <a href="#" class="card-link">Carrinho - <span class="card-span">$ 100</span></a>
+                    </h4>
+
+                    <img src="img/shopping-cart.png" alt="shopping-cart-icone">
+
+                    <div class="circle">
+                        <p>5</p>
+                    </div>
+
+                </div>
+
+            </div><!-- headecategoria-produtos-box-cart-->
+        </div>
+
+        <div class="navbar navbar-expand-lg header-menu">
+
+            <button class="navbar-toggler btn-menu" type="button" data-toggle="collapse" data-target="#nav-main""
+                aria-controls=" nav-main" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="collapse navbar-collapse nav-main mt-md-3" id="nav-main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shopping</a></li>
+                    <li><a href="produtos-unicos.html">Produtos Únicos</a></li>
+                    <li><a href="carrinho.html">Carrinho</a></li>
+                    <li><a href="checkout.html">Verificação de Saída</a></li>
+                    <li class="menu-active"><a class="menu-active-link" href="categoria.html">Categoria</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+        </div><!-- menu de navegação -->
+
+    </header><!-- área de navegação do cabeçalho -->
+
+    <div class="area-title">
+        <h1 class="h1-title">Categoria dos Produtos</h1>
+    </div><!-- backdround title -->
+
+    <main class="container d-flex justify-content-between mb-5 mt-5 main-content">
+
+        <aside class="aside-left mr-5">
+
+            <h2>Procurar Produtos</h2>
+
+            <form class="form-search">
+
+                <div class="button-container">
+                    <input type="search" placeholder="Procurando algo?">
+                    <input type="button" value="Procurar">
+                </div>
+
+            </form><!-- search área -->
+
+            <ul class="nav nav-pills mb-3 mt-5" id="pills-tab" role="tablist">
+
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                        aria-controls="pills-home" aria-selected="true">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">Marcas</a>
+                </li>
+
+            </ul><!-- navpills -->
+
+            <div class="tab-content" id="pills-tabContent">
+
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                    <ul class="categoria-produtos">
+                        <li>
+                            <a href="#"><i class="fas fa-cogs"></i> Eletrônicos</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fas fa-gamepad"></i> Games</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fas fa-laptop"></i> Computadores</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="far fa-clock"></i> Relógios</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fas fa-keyboard"></i> Acessórios</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fas fa-tshirt"></i> Estampas Customizadas</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fas fa-user-graduate"></i> Produtos Para Estudantes</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                    <ul class="categoria-marcas">
+
+                        <li>
+                            <a href="#"><img src="img/brand1.png" alt="brand1"></a>
+                        </li>
+
+                        <li>
+                            <a href="#"><img src="img/brand2.png" alt="brand2"></a>
+                        </li>
+
+                        <li>
+                            <a href="#"><img src="img/brand3.png" alt="brand3"></a>
+                        </li>
+
+                        <li>
+                            <a href="#"><img src="img/brand4.png" alt="brand4"></a>
+                        </li>
+
+                        <li>
+                            <a href="#"><img src="img/brand5.png" alt="brand5"></a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div><!-- navpills content -->
+
+        </aside><!-- conteúdo lateral -->
+
+        <section class="categoria-main-container">
+
+            <div class="categoria-produtos-container">
+
+                <div class="categoria-produtos-box">
+
+                    <img src="img/product-1.jpg" alt="Samsumg Galax S5 2015">
+                    <h5 class="mt-1 text-center">Samsumg Galax S5 2015</h5>
+                    <p class="text-center text-primary">R$700,00 <span class="text-dark"><s>R$800,00</s></span></p>
+
+                    <div class="btn-container">
+                        <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                        <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                    </div>
+
+                </div>
+
+                <div class="categoria-produtos-box">
+
+                    <img src="img/product-2.jpg" alt="Nokia lumia 1320">
+                    <h5 class="mt-1 text-center">Nokia lumia 1320</h5>
+                    <p class="text-center text-primary">R$899,99 <span class="text-dark"><s>R$999,99</s></span></p>
+
+                    <div class="btn-container">
+                        <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                        <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                    </div>
+
+                </div>
+
+                <div class="categoria-produtos-box">
+
+                    <img src="img/product-3.jpg" alt="Lg Neon 2015">
+                    <h5 class="mt-1 text-center">Lg Neon 2015</h5>
+                    <p class="text-center text-primary">R$400,99 <span class="text-dark"><s>R$500,99</s></span></p>
+
+                    <div class="btn-container">
+                        <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                        <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                    </div>
+
+                </div>
+
+                <div class="categoria-produtos-box">
+
+                    <img src="img/product-4.jpg" alt="Sony Microsoft">
+                    <h5 class="mt-1 text-center">Sony Microsoft</h5>
+                    <p class="text-center text-primary">R$400,00 <span class="text-dark"><s>R$450,99</s></span></p>
+
+                    <div class="btn-container">
+                        <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                        <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                    </div>
+
+                </div>
+
+                <div class="categoria-produtos-box">
+
+                    <img src="img/product-5.jpg" alt="IPhone 6">
+                    <h5 class="mt-1 text-center">IPhone 6</h5>
+                    <p class="text-center text-primary">R$1200,99 <span class="text-dark"><s>R$1399,99</s></span></p>
+
+                    <div class="btn-container">
+                        <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                        <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                    </div>
+
+                </div>
+
+                <div class="categoria-produtos-box">
+
+                    <img src="img/product-1.jpg" alt="Samsumg Galax S5 2015">
+                    <h5 class="mt-1 text-center">Samsumg Galax S5 2015</h5>
+                    <p class="text-center text-primary">R$700,00 <span class="text-dark"><s>R$800,00</s></span></p>
+
+                    <div class="btn-container">
+                        <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                        <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                    </div>
+
+                </div>
+
+                <div class="categoria-produtos-box">
+
+                    <img src="img/product-2.jpg" alt="Nokia lumia 1320">
+                    <h5 class="mt-1 text-center">Nokia lumia 1320</h5>
+                    <p class="text-center text-primary">R$899,99 <span class="text-dark"><s>R$999,99</s></span></p>
+
+                    <div class="btn-container">
+                        <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                        <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                    </div>
+
+                </div>
+
+                <div class="categoria-produtos-box">
+
+                    <img src="img/product-3.jpg" alt="Lg Neon 2015">
+                    <h5 class="mt-1 text-center">Lg Neon 2015</h5>
+                    <p class="text-center text-primary">R$400,99 <span class="text-dark"><s>R$500,99</s></span></p>
+
+                    <div class="btn-container">
+                        <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                        <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                    </div>
+
+                </div>
+
+                <div class="categoria-produtos-box">
+
+                    <img src="img/product-4.jpg" alt="Sony Microsoft">
+                    <h5 class="mt-1 text-center">Sony Microsoft</h5>
+                    <p class="text-center text-primary">R$400,00 <span class="text-dark"><s>R$450,99</s></span></p>
+
+                    <div class="btn-container">
+                        <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                        <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                    </div>
+
+                </div>
+
+                <div class="categoria-produtos-box">
+
+                    <img src="img/product-5.jpg" alt="IPhone 6">
+                    <h5 class="mt-1 text-center">IPhone 6</h5>
+                    <p class="text-center text-primary">R$1200,99 <span class="text-dark"><s>R$1399,99</s></span></p>
+
+                    <div class="btn-container">
+                        <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                        <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                    </div>
+
+                </div>
+
+                <div class="categoria-produtos-box">
+
+                    <img src="img/product-3.jpg" alt="Lg Neon 2015">
+                    <h5 class="mt-1 text-center">Lg Neon 2015</h5>
+                    <p class="text-center text-primary">R$400,99 <span class="text-dark"><s>R$500,99</s></span></p>
+
+                    <div class="btn-container">
+                        <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                        <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                    </div>
+
+                </div>
+
+                <div class="categoria-produtos-box">
+
+                    <img src="img/product-4.jpg" alt="Sony Microsoft">
+                    <h5 class="mt-1 text-center">Sony Microsoft</h5>
+                    <p class="text-center text-primary">R$400,00 <span class="text-dark"><s>R$450,99</s></span></p>
+
+                    <div class="btn-container">
+                        <button class="btn-adicionar"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                        <button class="btn-detalhes"><i class="fas fa-info"></i> Detalhes</button>
+                    </div>
+
+                </div>
+
+            </div><!-- área dos produtos -->
+
+            <div class="d-flex justify-content-center mt-5">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div><!-- paginação -->
+
+        </section><!-- produtos da categoria -->
+
+    </main><!-- conteúdo principal -->
+
+    <footer class="footer pt-5">
+
+        <div class="container footer-container">
+
+            <div class="row d-flex justify-content-between footer-container-content">
+
+                <div class="col-md-3 mb-5 mr-5 box-internal-footer">
+
+                    <h4 class="text-center text-info">Minha Conta</h4>
+
+                    <ul>
+                        <li class="navegacao-user-footer">
+                            <a class="navegacao-footer-link" href="#">Minha Conta</a>
+                        </li>
+                        <li class="navegacao-user-footer">
+                            <a class="navegacao-footer-link" href="#">Hitórico de Pedidos</a>
+                        </li>
+                        <li class="navegacao-user-footer">
+                            <a class="navegacao-footer-link" href="#">Lista de Desejos</a>
+                        </li>
+                        <li class="navegacao-user-footer">
+                            <a class="navegacao-footer-link" href="#">Contato do Fornecedor</a>
+                        </li>
+                        <li class="navegacao-user-footer">
+                            <a class="navegacao-footer-link" href="#">Página Home</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-3 mr-5 mb-5 box-internal-footer">
+
+                    <h4 class="text-center text-info">Categorias</h4>
+
+                    <ul>
+                        <li class="navegacao-user-footer">
+                            <a class="navegacao-footer-link" href="#">Celular</a>
+                        </li>
+                        <li class="navegacao-user-footer">
+                            <a class="navegacao-footer-link" href="#">Acessórios para casas</a>
+                        </li>
+                        <li class="navegacao-user-footer">
+                            <a class="navegacao-footer-link" href="#">TV LED</a>
+                        </li>
+                        <li class="navegacao-user-footer">
+                            <a class="navegacao-footer-link" href="#">Computadores</a>
+                        </li>
+                        <li class="navegacao-user-footer">
+                            <a class="navegacao-footer-link" href="#">Gadets</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-4 mb-5 box-internal-footer">
+
+                    <h4 class="text-center text-info">Boletim de Notícias</h4>
+
+                    <p class="text-white text-justify">Assine nossa newsletter e receba ofertas exclusivas que você não
+                        encontrará em nenhum outro lugar diretamente na sua caixa de entrada!</p>
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2 mb-3" type="search" placeholder="Digite seu e-mail"
+                            aria-label="Search">
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Se Inscrever</button>
+                    </form>
+
+                    <ul class="d-flex justify-content-center mt-4 bg-white p-2 rounded">
+
+                        <li class="redes-sociais-footer">
+                            <a href="" class="d-block"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+
+                        <li class="redes-sociais-footer">
+                            <a href="" class="d-block"><i class="fab fa-twitter"></i></a>
+                        </li>
+
+                        <li class="redes-sociais-footer">
+                            <a href="" class="d-block"><i class="fab fa-youtube"></i></a>
+                        </li>
+
+                        <li class="redes-sociais-footer">
+                            <a href="" class="d-block"><i class="fab fa-linkedin"></i></a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-inferior">
+
+            <div class="container">
+                <div class="box-footer-inferior">
+                    <p class="mt-3">© 2020 uCommerce.</p>
+                    <p class="mt-3">Todos os direitos reservados.</p>
+                    <p class="mt-3"><a href="#">freshDesignweb.com</a></p>
+                </div>
+            </div>
+        </div>
+
+    </footer><!-- rodapé -->
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script><!-- jquery -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script><!-- bootstrap.min.js -->
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script><!-- popper.min.js -->
+    <script src="js/main.js"></script><!-- main.js -->
+</body>
+
+</html>
