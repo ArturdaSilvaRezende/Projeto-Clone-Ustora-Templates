@@ -35,75 +35,88 @@
     <link rel="icon" href="favicon.png">
 
     <!-- html5shiv -->
-    <script src="node_modules/html5shiv-master/dist/html5shiv.js"></script>
-    <script src="node_modules/html5shiv-master/dist/html5shiv-printshiv.js"></script>
+    <!--[if lt IE 9]>
+        <script src="node_modules/html5shiv-master/dist/html5shiv.js"></script>
+        <script src="node_modules/html5shiv-master/dist/html5shiv-printshiv.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
 </head>
 
 <body>
 
-    <header class="header-area">
-        <div class="container d-md-flex justify-content-between align-items-center mt-md-3">
+    <header class="header-superior">
 
-            <nav class="menu-principal">
-                <ul>
-                    <li>
-                        <a href="#"><i class="fas fa-sign-out-alt"></i> Entrar</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-heart"></i> Lista de Desejo</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-cart-plus"></i> Meu Carrinho</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Verificação de Saída</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-user"></i> Minha Conta</a>
-                    </li>
-                </ul>
-            </nav>
+        <div class="container">
 
-            <nav class="menu-dropdown">
-                <ul>
-                    <li class="dropdown-control">
-                        <a href="#">Moeda: USD</a>
-                        <ul class="dropdown-itens-ul">
+            <section class="header-area">
+
+                <div class="d-md-flex justify-content-between align-items-center mt-md-3 nav-container">
+
+                    <nav class="menu-principal">
+                        <ul>
                             <li>
-                                <a href="">USD</a>
+                                <a href="#"><i class="fas fa-sign-out-alt"></i> Entrar</a>
                             </li>
                             <li>
-                                <a href="">INR</a>
+                                <a href="#"><i class="fas fa-heart"></i> Lista de Desejo</a>
                             </li>
                             <li>
-                                <a href="">GBP</a>
+                                <a href="#"><i class="fas fa-cart-plus"></i> Meu Carrinho</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Verificação de Saída</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-user"></i> Minha Conta</a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="dropdown-control">
-                        <a href="#">Idioma: Inglês</a>
-                        <ul class="dropdown-itens-ul">
-                            <li>
-                                <a href="">Inglês</a>
+                    </nav><!-- menu principal -->
+
+                    <nav class="menu-dropdown">
+                        <ul>
+                            <li class="dropdown-control">
+                                <a href="#">Moeda: USD</a>
+                                <ul class="dropdown-itens-ul">
+                                    <li>
+                                        <a href="">USD</a>
+                                    </li>
+                                    <li>
+                                        <a href="">INR</a>
+                                    </li>
+                                    <li>
+                                        <a href="">GBP</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li>
-                                <a href="">Francês</a>
-                            </li>
-                            <li>
-                                <a href="">Alemão</a>
+                            <li class="dropdown-control">
+                                <a href="#">Idioma: Inglês</a>
+                                <ul class="dropdown-itens-ul">
+                                    <li>
+                                        <a href="">Inglês</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Francês</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Alemão</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
-                    </li>
-                </ul>
-            </nav>
+                    </nav><!-- menu dropdown -->
 
-        </div>
+                </div><!-- container dos menus -->
 
-    </header><!-- área do cabeçalho superior -->
+            </section><!-- área do cabeçalho superior -->
 
-    <header class="header-main">
+        </div><!-- container -->
+
+    </header><!-- header superior -->
+
+    <section class="header-main">
 
         <div class="container mt-4">
+
             <div class="header-container d-flex justify-content-between align-items-center">
 
 
@@ -115,7 +128,8 @@
                 <div class="area-cart d-flex justify-content-center align-items-center">
 
                     <h4 class="cart-title">
-                        <a href="#" class="card-link">Carrinho - <span class="card-span">$ 100</span></a>
+                        <a href="carrinho.html" class="card-link">Carrinho - <span class="card-span">$
+                                100</span></a>
                     </h4>
 
                     <img src="img/shopping-cart.png" alt="shopping-cart-icone">
@@ -127,7 +141,12 @@
                 </div>
 
             </div><!-- header logo // box-cart-->
+
         </div>
+
+    </section><!-- aréa logo // box-cart -->
+
+    <header class="header-inferior">
 
         <div class="navbar navbar-expand-lg header-menu">
 
@@ -137,13 +156,12 @@
             </button>
 
             <nav class="collapse navbar-collapse nav-main mt-md-3" id="nav-main">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
+                <ul class="container">
+                    <li class="menu-active"><a class="menu-active-link" href="index.html">Home</a></li>
                     <li><a href="shop.html">Shopping</a></li>
                     <li><a href="produtos-unicos.html">Produtos Únicos</a></li>
                     <li><a href="carrinho.html">Carrinho</a></li>
-                    <li class="menu-active"><a class="menu-active-link" href="checkout.html">Verificação de Saída</a>
-                    </li>
+                    <li><a href="checkout.html">Verificação de Saída</a></li>
                     <li><a href="categoria.html">Categoria</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
