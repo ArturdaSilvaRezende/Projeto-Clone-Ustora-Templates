@@ -197,9 +197,6 @@ a {
     background-color: #f4f4f4;
     margin-top: 30px;
     padding: 10px;
-    position: fixed;
-    width: 100%;
-    z-index: 2;
 }
 
 .header-inferior .header-menu {
@@ -271,10 +268,6 @@ a {
 
 /* =============== área de promoções =============== */
 
-main {
-    margin-top: 12%;
-}
-
 .area-promocoes {
     background-color: #f4f4f4;
 }
@@ -320,32 +313,15 @@ main {
 }
 
 .area-promocoes .promocao-01 p, .promocao-02 p, .promocao-03 p, .promocao-04 p {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .area-promocoes .promocao-01:hover, .promocao-02:hover, .promocao-03:hover, .promocao-04:hover {
     background-color: #333;
 }
 
-@media screen and (min-width: 960px) and (max-width: 1200px) {
-    main {
-        margin-top: 17%;
-    }
-}
+@media screen and (min-width: 701px) and (max-width: 959px) {
 
-@media screen and (min-width: 660px) and (max-width: 959px) {
-    main {
-        margin-top: 18%;
-    }
-}
-
-@media screen and (min-width: 360px) and (max-width: 659px) {
-    main {
-        margin-top: 30%;
-    }
-}
-
-@media screen and (max-width: 960px) {
     .area-promocoes .container-promocoes {
         flex-wrap: wrap;
     }
@@ -357,8 +333,27 @@ main {
         margin-top: 20px;
     }
     .area-promocoes .promocao-01 p, .promocao-02 p, .promocao-03 p, .promocao-04 p {
-        font-size: 16px;
+        font-size: 17px;
     }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 700px) {
+
+    .area-promocoes .container-promocoes {
+        flex-wrap: wrap;
+    }
+    .area-promocoes .container-promocoes .promocao-01, .container-promocoes .promocao-02 {
+        width: 40%;
+    }
+    .area-promocoes .container-promocoes .promocao-03, .container-promocoes .promocao-04 {
+        width: 40%;
+        margin-top: 20px;
+    }
+    .area-promocoes .promocao-01 p, .promocao-02 p, .promocao-03 p, .promocao-04 p {
+        font-size: 14px;
+    }
+
 }
 
 /* =============== área de promoções recentes =============== */
@@ -444,13 +439,32 @@ main {
     color: #fff;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 701px) and (max-width: 1024px) {
     .produtos-recentes .title-produtos-recentes {
-        margin-bottom: 50px;
+        margin-bottom: 70px;
     }
     .produtos-recentes .buttons-control {
         right: 20px;
         top: 80px;
+    }
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 700px){
+    .produtos-recentes .title-produtos-recentes {
+        margin-bottom: 70px;
+    }
+    .produtos-recentes .buttons-control {
+        right: 20px;
+        top: 80px;
+    }
+
+    .produtos-recentes .item {
+        margin: 0 auto;
+    }
+
+    .produtos-recentes .img-responsive {
+        width: 60%;
     }
 }
 
@@ -463,19 +477,20 @@ main {
 
 .area-marcas .buttons-control-marks {
     position: absolute;
-    top: 30px;
-    right: 130px;
+    top: 0px;
+    right: 110px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 300px) and (max-width: 700px) {
     .area-marcas {
         margin-top: 60px;
     }
     .area-marcas .buttons-control-marks {
         position: absolute;
-        top: 20px;
+        top: -30px;
         right: 20px;
     }
+  
 }
 
 /* =============== área dos produtos mais vendidos =============== */

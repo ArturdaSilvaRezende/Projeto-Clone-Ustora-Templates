@@ -7,7 +7,7 @@ $(document).ready(function () {
     owl.owlCarousel({
         items: 4,
         loop: true,
-        margin: 50,
+        margin: 30,
         nav: false,
         dots: false,
         slideTransition: 'linear',

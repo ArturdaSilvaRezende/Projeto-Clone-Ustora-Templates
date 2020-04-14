@@ -45,42 +45,129 @@
     font-weight: 700;
 }
 
-@media screen and (max-width: 700px) {
+.carousel-inner {
+    position: relative;
+}
 
-    .carousel-item {
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+
+    .carousel-inner > .carousel-item .text-carousel-1 {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    .carousel-inner > .carousel-item .text-carousel-1 .title-name-product .mochila {
+        text-align: right;
+        width: 300px;
+    }
+
+    .carousel-inner > .carousel-item .text-carousel-1 .title-name-product h2 p {
+        font-size: 16px;
+    }
+
+    .carousel-inner > .carousel-item .text-carousel-1 .compra-mochila {
+        position: absolute;
+        right: 40px;
+        top: 80px;
+    }
+
+}
+
+@media screen and (min-width: 701px) and (max-width: 959px) {
+
+    .carousel-inner {
         position: relative;
     }
 
     .carousel-inner > .carousel-item .text-carousel-1 {
         position: absolute;
-        top: 0;
-        right: 40px;
+        top: 40px;
+        right: 0px;
     }
 
-    .carousel-inner > .carousel-item .text-carousel-1 h2 {
-        font-size: 16px;
-    }
-
-    .carousel-inner > .carousel-item .text-carousel-1 .mochila {
-        width: 200px;
+    .carousel-inner > .carousel-item .text-carousel-1 .title-name-product {
         position: absolute;
-        top: 10px;
-        right: 5px;
+        width: 250px;
+        top: 0;
+        right: -70px;
     }
 
-    
-    .carousel-inner > .carousel-item .text-carousel-1 .mochila p{
+    .carousel-inner > .carousel-item .text-carousel-1 .title-name-product h2 {
+        font-size: 15pt;
+    }
+
+    .carousel-inner > .carousel-item .text-carousel-1 .title-name-product .mochila {
+        position: absolute;
+        right: 50px;
+        top: 20px;
+        width: 250px;
+    }
+
+    .carousel-inner > .carousel-item .text-carousel-1 .title-name-product h2 p {
+        font-size: 12px;
+    }
+
+    .carousel-inner > .carousel-item .text-carousel-1 .carousel-link-compra {
+        position: absolute;
+        right: 30px;
+        top: 60px;
+        padding: 10px;
+        width: 140px;
+        font-size: 12px;
+    }
+
+    .carousel-inner > .carousel-item .text-carousel-1 .carousel-link-compra a {
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 700px) {
+
+    .carousel-inner > .carousel-item .text-carousel-1 {
+        position: absolute;
+        top: 20px;
+        right: 0px;
+    }
+
+    .carousel-inner > .carousel-item .text-carousel-1 .title-name-product {
+        position: absolute;
+        width: 250px;
+        top: -10px;
+        right: -70px;
+    }
+
+    .carousel-inner > .carousel-item .text-carousel-1 .title-name-product h2 {
+        font-size: 15pt;
+    }
+
+    .carousel-inner > .carousel-item .text-carousel-1 .title-name-product .mochila {
+        position: absolute;
+        right: 80px;
+        top: 5px;
+        width: 180px;
+    }
+
+    .carousel-inner > .carousel-item .text-carousel-1 .title-name-product h2 p {
         font-size: 11px;
     }
 
     .carousel-inner > .carousel-item .text-carousel-1 .carousel-link-compra {
-        font-size: 10px;
-        width: 120px;
         position: absolute;
-        right: 10px;
+        right: 50px;
         top: 40px;
+        padding: 10px;
+        width: 150px;
+        font-size: 12px;
     }
+
+    .carousel-inner > .carousel-item .text-carousel-1 .carousel-link-compra a {
+        margin: 0 auto;
+    }
+
 }
+
 
 /* ======== controladores do carousel ======== */
 
@@ -89,7 +176,7 @@
     width: 40px;
     position: absolute;
     top: 170px;
-    left: 10px;
+    left: -10px;
     background-color: rgba(89, 136, 201, 0.6);
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -108,7 +195,7 @@
     width: 40px;
     position: absolute;
     top: 170px;
-    right: 10px;
+    right: -10px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -128,15 +215,36 @@
     background-color: #5a88ca;
  }
 
- @media screen and (max-width: 700px) {
-
-    #area-slide {
-        margin-top: 40px;
-    }
+ @media screen and (min-width: 960px) and (max-width: 1200px) {
 
     .control-slides, .control-slides-2 {
         top: 50%;
     }
+
+ }
+
+ @media screen and (min-width: 701px) and (max-width: 959px) {
+
+    .control-slides, .control-slides-2 {
+        top: 40%;
+    }
+
+ }
+
+ @media screen and (min-width: 320px) and (max-width: 700px) {
+
+    .control-slides {
+        left: 14px;
+    }
+
+    .control-slides-2 {
+        right: 14px;
+    }
+
+    .control-slides, .control-slides-2 {
+        top: 40%;
+    }
+
  }
 
 
