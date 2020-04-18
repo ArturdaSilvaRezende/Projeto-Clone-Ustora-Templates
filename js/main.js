@@ -5,12 +5,12 @@
 
 //O bloco de código abaixo controla o efeito hover na box carrinho de compras do header
 
-function cart_efeito_hover() {
+(function cart_efeito_hover() {
 
-    var area_cart = $('.area-cart'); //Essa variável manipula o container do carrinho
-    var area_cart_link = $('.card-link'); //Essa variável manipula o link dentro do h4
-    var area_cart_span = $('.card-span'); //Essa variável manipula o span dentro do link do h4
-    var area_cart_circle = $('.circle'); //Essa variável manipula a área dos pedidos (circle)
+    const area_cart = $('.area-cart'); //Essa variável manipula o container do carrinho
+    const area_cart_link = $('.card-link'); //Essa variável manipula o link dentro do h4
+    const area_cart_span = $('.card-span'); //Essa variável manipula o span dentro do link do h4
+    const area_cart_circle = $('.circle'); //Essa variável manipula a área dos pedidos (circle)
 
     area_cart.mouseenter(function () {
         $(this).css('background-color', '#5a88ca');
@@ -28,18 +28,17 @@ function cart_efeito_hover() {
         $(area_cart_circle).css('background-color', '#5a88ca');
     });
 
-}
-
-cart_efeito_hover();
+})();
 
 //O bloco de código abaixo controla o show e hide do 'calcular remessa' do arquivo (carrinho.html)
 
-$(document).ready(function(){
+$(document).ready(function () {
 
-    var calc_remessa = $('.title-remessa');
+    const calc_remessa = $('.title-remessa');
+
     $('.area-remessa').css('display', 'none');
 
-    calc_remessa.click(function(){
+    calc_remessa.click(function () {
         $('.area-remessa').slideToggle(1000);
         return false;
     });
@@ -48,50 +47,54 @@ $(document).ready(function(){
 
 //O bloco de código abaixo controla a mudança de imagem do container 'single-product-container' do arquivo produtis-unicos.html
 
-$(document).ready(function(){
+(function galeria_imagens() {
 
-    
-    var img_main = $('.img-main');
-    var img_galery_01 = $('.img-galery-01');
-    var img_galery_02 = $('.img-galery-02');
-    var img_galery_03 = $('.img-galery-03');
-    var img_galery_04 = $('.img-galery-04');
-    
-    //img-galery-01
-    img_galery_01.mouseenter(function(){
-        img_main.attr('src', '../img/iphone11-a.jpg');
-    });
+    const img_main = document.querySelector(".img-main");
+    const img_galery_01 = document.querySelector(".img-galery-01");
+    const img_galery_02 = document.querySelector(".img-galery-02");
+    const img_galery_03 = document.querySelector(".img-galery-03");
+    const img_galery_04 = document.querySelector(".img-galery-04");
 
-    img_galery_01.mouseleave(function(){
-        img_main.attr('src', '../img/iphone-11-pro-no-white.png');
-    });
+    img_galery_01.addEventListener("mouseenter", troca_imagem_1);
+    img_galery_01.addEventListener("mouseout", troca_imagem_main);
 
-    //img-galery-02
-    img_galery_02.mouseenter(function(){
-        img_main.attr('src', '../img/iphone11-b.jpg');
-    });
+    img_galery_02.addEventListener("mouseenter", troca_imagem_2);
+    img_galery_02.addEventListener("mouseout", troca_imagem_main);
 
-    img_galery_02.mouseleave(function(){
-        img_main.attr('src', '../img/iphone-11-pro-no-white.png')
-    });
+    img_galery_03.addEventListener("mouseenter", troca_imagem_3);
+    img_galery_03.addEventListener("mouseout", troca_imagem_main);
 
-    //img-galery-03
-    img_galery_03.mouseenter(function(){
-        img_main.attr('src', '../img/iphone11-c.jpg');
-    });
+    img_galery_04.addEventListener("mouseenter", troca_imagem_4);
+    img_galery_04.addEventListener("mouseout", troca_imagem_main);
 
-    img_galery_03.mouseleave(function(){
-        img_main.attr('src', '../img/iphone-11-pro-no-white.png')
-    });
+    function troca_imagem_1() {
+        img_main.src = 'img/iphone11-a.jpg';
+    }
 
-     //img-galery-04
-     img_galery_04.mouseenter(function(){
-        img_main.attr('src', '../img/iphone11-d.jpg');
-    });
+    function troca_imagem_2() {
+        img_main.src = 'img/iphone11-b.jpg';
+    }
 
-    img_galery_04.mouseleave(function(){
-        img_main.attr('src', '../img/iphone-11-pro-no-white.png')
-    });
-    
+    function troca_imagem_3() {
+        img_main.src = 'img/iphone11-c.jpg';
+    }
+
+    function troca_imagem_4() {
+        img_main.src = 'img/iphone11-d.jpg';
+    }
+
+    function troca_imagem_main() {
+        img_main.src = 'img/iphone-11-pro-no-white.png';
+    }
+
+})();
+
+// A function abaixo ativa o plugin jquery nice number do arquivo produtos-unicos.html
+$(function(){
+
+    $('input[type="number"]').niceNumber();
+  
 });
+
+
 

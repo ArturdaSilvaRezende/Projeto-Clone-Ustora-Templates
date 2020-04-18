@@ -228,7 +228,16 @@ a {
 .header-menu .btn-menu {
     margin: 0 auto;
     border: 2px solid #ddd;
+    background-color: #5a88ca;
     outline: none;
+}
+
+.header-menu .btn-menu:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-menu .btn-menu i {
+    color: #fff;
 }
 
 @media screen and (min-width: 957px) and (max-width: 1200px) {
@@ -520,7 +529,8 @@ a {
 
 .jumbotron-container .jumbotron-box:hover {
     background-color: rgba(62, 243, 7, 0.1);
-    -webkit-transform: scale(1, 1.4);
+    -webkit-transform: scale(1, 1.2);
+    -ms-transform: scale(1, 1.2);
 }
 
 .jumbotron-container .jumbotron-box .jumbotron-box-internal {
@@ -529,6 +539,7 @@ a {
 
 .jumbotron-container .jumbotron-box .jumbotron-box-internal p {
     font-weight: bolder;
+    font-size: 13px;
 }
 
 .jumbotron-container .jumbotron-box img {
@@ -536,12 +547,19 @@ a {
     width: 50%;
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .jumbotron-container .jumbotron-box .jumbotron-box-internal p {
+        font-weight: bolder;
+        font-size: 11px;
+    }
+}
+
 @media screen and (min-width: 700px) and (max-width: 1024px) {
     .jumbotron-container {
         flex-direction: column;
     }
     .jumbotron-container .jumbotron-box {
-        width: 80%;
+        width: 100%;
         margin: 20px auto;
     }
     .jumbotron-container .jumbotron-box .jumbotron-box-internal {
@@ -552,10 +570,13 @@ a {
         align-items: stretch;
     }
     .jumbotron-container .jumbotron-box .jumbotron-box-internal p {
+        width: 300px;
+    }
+    .jumbotron-container .jumbotron-box .jumbotron-box-internal p a{
         font-size: 15px;
     }
     .jumbotron-container .jumbotron-box img {
-        width: 60%;
+        width: 50%;
     }
 }
 
@@ -572,13 +593,18 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: stretch;
+        
     }
     .jumbotron-container .jumbotron-box .jumbotron-box-internal p {
-        font-size: 15px;
+        width: 200px;
+        text-align: center;
+    }
+    .jumbotron-container .jumbotron-box .jumbotron-box-internal p a{
+        font-size: 12px;
+        text-align: center;
     }
     .jumbotron-container .jumbotron-box img {
-        width: 60%;
+        width: 40%;
     }
     .jumbotron-container .jumbotron-box .jumbotron-box-internal .text-preco {
         width: 100%;
@@ -602,6 +628,10 @@ a {
     -moz-border-radius: 10px;
     margin-right: 20px;
     transition: all 0.5s;
+}
+
+.footer button[type=submit] {
+    width: 150px;
 }
 
 .redes-sociais-footer:last-child {

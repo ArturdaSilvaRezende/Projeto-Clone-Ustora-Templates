@@ -26,6 +26,7 @@
     border: none;
     color: #fff;
     margin-top: 10px;
+    width: 100px;
 }
 
 .aside-left .form-search input[type=button]:hover {
@@ -44,7 +45,7 @@
 
 .categoria-produtos {
     padding: 15px;
-    background-color: #192020;
+    background-color: #f4f4f4;
     text-align: center;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -56,13 +57,14 @@
 }
 
 .categoria-produtos li a {
-    color: #fff;
+    color: #888;
     text-decoration: none;
     transition: all 0.3s;
 }
 
 .categoria-produtos li a:hover {
-    color: #a82c2c;
+    text-decoration: underline;
+    color: #439943;
 }
 
 /* marcas dos produtos */

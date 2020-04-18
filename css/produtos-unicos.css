@@ -1,5 +1,9 @@
 /* ================ contaiter img ================ */
 
+body {
+    overflow-x: hidden;
+}
+
 .single-product-container {
     width: 100%;
 }
@@ -56,6 +60,10 @@
     padding: 4px 4px;
 }
 
+#aside-left {
+    height: 20%;
+}
+
 @media screen and (min-width: 780px) and (max-width: 1024px) {
     /* contaiter img */
     .single-product-container {
@@ -75,7 +83,7 @@
         margin: 0 auto;
     }
     #aside-left {
-        margin-top: -10px;
+        margin-top: -2%;
     }
     /* descrição dos produtos área */
     .description-product-container {
@@ -89,13 +97,52 @@
     main {
         position: relative;
     }
+   
     #area-search {
         position: absolute;
         top: -30px;
     }
+    /*nav-pills*/
+
+    #pills-profile form .pills-box div .label-mail {
+        padding-left: 15px;
+    }
+
+    #pills-profile form {
+        width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    
+    #pills-profile form .pills-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    
+    }
+
+    #pills-profile form .pills-box input {
+        font-size: 13px;
+    }
+
+    #pills-profile form .pills-box #cMail {
+        width: 100%;
+        margin-left: 15px;
+    }
+
+    #pills-profile form .pills-box-ranking {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
 }
 
-@media screen and (min-width: 320px) and (max-width: 781px) {
+@media screen and (min-width: 320px) and (max-width: 779px) {
     /* contaiter img */
     .description-product-container {
         margin-top: 20px;
@@ -112,9 +159,49 @@
         position: absolute;
         top: -30px;
     }
+     /*nav-pills*/
+
+     #pills-profile form .pills-box div .label-mail {
+        padding-left: 18px;
+    }
+
+     #pills-profile form {
+        width: 100%;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #pills-profile form .pills-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    
+    }
+
+    #pills-profile form .pills-box input {
+        font-size: 13px;
+    }
+
+    #pills-profile form .pills-box #cMail {
+        width: 100%;
+        margin-left: 15px;
+    }
+
+    #pills-profile form .pills-box-ranking {
+        width: 100%;
+    }
 }
 
 /* ================ produtos relacionados ================ */
+
+@media screen and (min-width: 320px) and (max-width: 779px) {
+    #produtos-relacionados {
+      
+     
+    }
+}
 
 #produtos-relacionados h5 {
     font-size: 14px;
@@ -126,4 +213,17 @@
 
 #produtos-relacionados .btn-container button {
     font-size: 10px;
+}
+
+/* ================ controladores do input number ================ */
+
+button {
+    width: 30px;
+    padding: 5;
+    background-color: #5a88ca;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #000;
 }

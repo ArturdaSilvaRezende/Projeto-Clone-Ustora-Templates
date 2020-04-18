@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carrinho.css">
     <link rel="stylesheet" href="css/produtos-unicos.css">
+    <link rel="stylesheet" href="css/jquery.nice-number.css">
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -155,16 +156,17 @@
 
         <div class="navbar navbar-expand-lg header-menu">
 
-            <button class="navbar-toggler btn-menu" type="button" data-toggle="collapse" data-target="#nav-main""
+            <button class="navbar-toggler btn-menu w-auto" data-toggle="collapse" data-target="#nav-main""
                 aria-controls=" nav-main" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
 
             <nav class="collapse navbar-collapse nav-main mt-md-3" id="nav-main">
                 <ul class="container">
-                    <li class="menu-active"><a class="menu-active-link" href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="shop.html">Shopping</a></li>
-                    <li><a href="produtos-unicos.html">Produtos Únicos</a></li>
+                    <li class="menu-active"><a class="menu-active-link" href="produtos-unicos.html">Produtos Únicos</a>
+                    </li>
                     <li><a href="carrinho.html">Carrinho</a></li>
                     <li><a href="checkout.html">Verificação de Saída</a></li>
                     <li><a href="categoria.html">Categoria</a></li>
@@ -280,7 +282,7 @@
             <div class="product-image">
 
                 <div class="product-image-main">
-                    <img class="img-main" src="img/iphone-11-pro-no-white.png" alt="iphone-11-pro-no-white.png">
+                    <img class="img-main" src="img/iphone-11-pro-no-white.png" alt="iphone-11-pro-no-white">
                 </div><!-- img-main-área -->
 
                 <div class="product-image-galery d-flex align-items-center">
@@ -311,9 +313,11 @@
 
             </div><!-- titile description -->
 
-            <form class="add-cart">
-                <input type="number" min="0" max="5">
-                <input type="button" value="Adicionar no carrinho">
+            <form class="add-cart flex-column">
+                <div class="flex-column w-50">
+                    <input class="w-25 ml-2 mr-2" type="number" value="0" min="1" max="5">
+                    <input class="mt-3" type="button" value="Adicionar no carrinho">
+                </div>
             </form><!-- add-cart-área -->
 
             <ul class="nav nav-pills mb-3 mt-5" id="pills-tab" role="tablist">
@@ -329,9 +333,9 @@
 
             </ul><!-- navpills -->
 
-            <div class="tab-content" id="pills-tabContent">
+            <div class="tab-content container-fluid" id="pills-tabContent">
 
-                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="tab-pane fade show active w-75" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <p class="text-dark text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
                         ab. Nesciunt perspiciatis quidem iure amet aliquid quae placeat ipsa nobis tempore voluptas,
                         doloremque provident adipisci consequatur quibusdam? Magni, repellat aliquam.</p>
@@ -341,38 +345,45 @@
 
                     <form>
 
-                        <div class="form-group">
-                            <label for="cText">Nome</label>
-                            <input type="text" class="form-control" id="cText" placeholder="Informe seu nome">
-                        </div>
+                        <div class="pills-box">
 
-                        <div class="form-group pt-2 pb-2">
-                            <label for="cMail">Email</label>
-                            <input type="email" class="form-control" id="cMail" placeholder="name@example.com">
-                        </div>
+                            <div class="form-group">
+                                <label for="cText">Nome</label>
+                                <input type="text" class="form-control" id="cText" placeholder="Informe seu nome">
+                            </div>
 
-                        <div class="form-group pt-2 pb-2">
-
-                            <label>Seu Ranking</label>
-
-                            <p class="text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </p>
+                            <div class="form-group pt-2 pb-2">
+                                <label for="cMail" class="label-mail">Email</label>
+                                <input type="email" class="form-control" id="cMail" placeholder="name@example.com">
+                            </div>
 
                         </div>
 
-                        <div class="form-group add-cart ">
+                        <div class="pills-box-ranking">
 
-                            <label for="cTextArea">Suas Avaliações</label>
-                            <textarea class="form-control" id="cTextArea" rows="3"></textarea>
-                            <input class="mt-3" type="button" value="Enviar">
+                            <div class="form-group pt-2 pb-2">
+
+                                <label>Seu Ranking</label>
+
+                                <p class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </p>
+
+                            </div>
+
+                            <div class="form-group add-cart">
+
+                                <label for="cTextArea">Suas Avaliações</label>
+                                <textarea class="form-control" id="cTextArea" rows="3"></textarea>
+                                <input class="mt-3" type="button" value="Enviar">
+
+                            </div>
 
                         </div>
-
                     </form>
 
                 </div>
@@ -456,7 +467,7 @@
 
     <footer class="footer pt-5">
 
-        <div class="container footer-container">
+        <div class="footer-container p-5">
 
             <div class="row d-flex justify-content-between footer-container-content">
 
@@ -515,13 +526,13 @@
                     <p class="text-white text-justify">Assine nossa newsletter e receba ofertas exclusivas que você não
                         encontrará em nenhum outro lugar diretamente na sua caixa de entrada!</p>
 
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2 mb-3" type="search" placeholder="Digite seu e-mail"
+                    <form class="form-inline flex-column">
+                        <input class="form-control mr-sm-2 w-100" type="search" placeholder="Digite seu e-mail"
                             aria-label="Search">
-                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Se Inscrever</button>
+                        <button class="btn btn-outline-info mt-3 mr-auto" type="submit">Se Inscrever</button>
                     </form>
 
-                    <ul class="d-flex justify-content-center mt-4 bg-white p-2 rounded">
+                    <ul class="d-flex justify-content-start mt-4 p-2 rounded">
 
                         <li class="redes-sociais-footer">
                             <a href="" class="d-block"><i class="fab fa-facebook-f"></i></a>
@@ -565,6 +576,7 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script><!-- popper.min.js -->
     <script src="node_modules/owlCarousel/dist/owl.carousel.min.js"></script><!-- owl.carousel.min.js -->
     <script src="js/owl-carousel-active.js"></script><!-- owl-carousel-active.js -->
+    <script src="js/jquery.nice-number.js"></script><!-- nice-number-->
     <script src="js/main.js"></script><!-- main.js -->
 </body>
 
