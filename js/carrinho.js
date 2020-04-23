@@ -15,9 +15,30 @@
     document.querySelector(".total").value = "R$ " + tot;
 })();
 
+//O bloco de código abaixo controla o show e hide do 'calcular remessa'
+
+$(document).ready(function () {
+
+    const calc_remessa = $('.title-remessa');
+
+    $('.area-remessa').css('display', 'none');
+
+    calc_remessa.click(function () {
+        $('.area-remessa').slideToggle(1000);
+        return false;
+    });
+
+});
 
 $(function(){
 
     $('.cQtd').niceNumber();
+  
+});
+
+// A function abaixo ativa o plugin jquery nice number do arquivo produtos-unicos.html
+$(function(){
+
+    $('input[type="number"]').niceNumber();
   
 });

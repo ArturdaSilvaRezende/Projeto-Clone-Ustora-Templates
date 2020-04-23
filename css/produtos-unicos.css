@@ -60,8 +60,21 @@ body {
     padding: 4px 4px;
 }
 
+/* aside área */
 #aside-left {
     height: 20%;
+}
+
+#aside-left .form-search input[type=button]{
+    background-color: #5a88ca;
+    padding: 6px 10px;
+    border: none;
+    color: #fff;
+    margin-top: 15px;
+}
+
+#aside-left .form-search input[type=button]:hover {
+    background-color: #000;
 }
 
 @media screen and (min-width: 780px) and (max-width: 1024px) {
