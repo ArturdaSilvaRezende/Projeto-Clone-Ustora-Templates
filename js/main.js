@@ -48,3 +48,40 @@
     })
 
 }));
+
+//A estrutura abaixo faz o controle do scrool do botão voltar ao top
+
+(function voltar_top(){
+
+    const back_top = document.querySelector(".btn-voltar-top");
+    const back_top_mensseger = document.querySelector(".back_top_mensseger")
+
+    back_top.addEventListener("mouseenter", open_mensseger);
+    back_top.addEventListener("mouseout", close_mensseger);
+    back_top.addEventListener("click", backToTop);
+
+    window.onscroll = function() {
+        scrool();
+    }
+
+    function open_mensseger() {
+        back_top_mensseger.style.opacity = '1';
+    }
+
+    function close_mensseger() {
+        back_top_mensseger.style.opacity = '0';
+    }
+
+    function scrool() {
+        if(document.documentElement.scrollTop > 300) {
+            back_top.style.opacity = '1';
+        } else {
+            back_top.style.opacity = '0';
+        }
+    }
+
+    function backToTop(){
+        document.documentElement.scrollTop = 0;
+    }
+
+})();
