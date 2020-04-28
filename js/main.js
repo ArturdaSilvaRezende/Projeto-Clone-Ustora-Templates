@@ -32,18 +32,18 @@
 
 //A estrutura abaixo faz o controle do modal de login
 
-($(document).ready(function(){
+($(document).ready(function () {
 
     const login_ustora = $('.login-ustora');
     const modal_content = $('.modal-login');
     const btn_closer_modal = $('.btn-closer, .btn-fechar');
 
-    login_ustora.click(function(e){
+    login_ustora.click(function (e) {
         e.stopPropagation();
         modal_content.fadeIn(1000);
     })
 
-    btn_closer_modal.click(function(){
+    btn_closer_modal.click(function () {
         modal_content.fadeOut(1000);
     })
 
@@ -51,7 +51,7 @@
 
 //A estrutura abaixo faz o controle do scrool do botão voltar ao top
 
-(function voltar_top(){
+(function voltar_top() {
 
     const back_top = document.querySelector(".btn-voltar-top");
     const back_top_mensseger = document.querySelector(".back_top_mensseger")
@@ -60,7 +60,7 @@
     back_top.addEventListener("mouseout", close_mensseger);
     back_top.addEventListener("click", backToTop);
 
-    window.onscroll = function() {
+    window.onscroll = function () {
         scrool();
     }
 
@@ -73,15 +73,89 @@
     }
 
     function scrool() {
-        if(document.documentElement.scrollTop > 300) {
+        if (document.documentElement.scrollTop > 300) {
             back_top.style.opacity = '1';
         } else {
             back_top.style.opacity = '0';
         }
     }
 
-    function backToTop(){
+    function backToTop() {
         document.documentElement.scrollTop = 0;
     }
 
 })();
+
+
+//A estrutura abaixo faz o controle do TypeWrite do modal propaganda
+
+let indice = 1;
+
+function modal_propaganda_index() {
+
+    const modal_propaganda_text = 'Fique de olho em nossas promoções';
+
+
+    if (indice <= modal_propaganda_text.length) {
+
+        let txt = modal_propaganda_text.substring(0, indice);
+        document.querySelector(".modal-propaganda-title").innerHTML = txt;
+
+        /*
+        if (indice % 2 === 0) {
+            document.querySelector(".modal-propaganda-title").style.color = "BLUE";
+        } else {
+            document.querySelector(".modal-propaganda-title").style.color = "RED";
+        }
+        */
+
+        setTimeout("modal_propaganda_index()", 125);
+        indice++;
+    }
+
+    else {
+
+        indice = 1;
+        document.querySelector(".modal-propaganda-title").innerHTML = "";
+        setTimeout("modal_propaganda_index()", 1000);
+    }
+}
+
+modal_propaganda_index();
+
+function modal_propaganda(modalID) {
+
+    const modal_button = document.querySelector(".btn-modal-propaganda");
+
+    const modalPropaganda = document.getElementById(modalID);
+    modalPropaganda.classList.add('mostrar');
+
+    if (localStorage.fechaModal !== modalID) {
+
+        if (modalPropaganda) {
+
+            modalPropaganda.addEventListener("click", (e) => {
+
+                if (e.target.id == modalID) {
+                    modalPropaganda.classList.remove('mostrar');
+                    localStorage.fechaModal = modalID;
+                }
+            });
+
+            modal_button.addEventListener("click", () => {
+                modalPropaganda.style.display = 'none';
+                localStorage.fechaModal = modalID;
+            });
+
+        }
+
+    }
+}
+
+document.addEventListener('scroll', () => {
+
+    if(window.pageYOffset > 900) {
+        modal_propaganda('modal-propaganda');
+    }
+})
+

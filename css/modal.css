@@ -254,3 +254,126 @@
 html {
     scroll-behavior: smooth;
 }
+
+@media screen and (max-width: 700px) {
+    .btn-voltar-top {
+        width: 90px;
+        right: 10px;
+    }
+    .btn-voltar-top img {
+        height: 60px;
+    }
+}
+
+/* ==== área do modal de propaganda  ===== */
+
+.modal-propaganda {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-propaganda.mostrar {
+    display: flex;
+}
+
+.modal-propaganda-container {
+    height: 200px;
+    background: url('../img/iphone-11-pro-no-white.png') 100% 100% no-repeat;
+    background-position: center;
+    position: absolute;
+    background-color: #f4f4f4;
+    width: 400px;
+    padding: 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    -ms-border-radius: 6px;
+}
+
+.modal-propaganda-container .modal-propaganda-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(238, 255, 0, 0.6);
+}
+
+.modal-propaganda-container .modal-propaganda-box h5 {
+    text-align: center;
+    color: #2c05bb;
+    line-height: 200px;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.modal-propaganda-container .modal-propaganda-box a {
+    position: absolute;
+    bottom: 50px;
+    left: 10px;
+    color: #2c05bb;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.modal-propaganda-container .modal-propaganda-box a:hover {
+    color: #000;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    -ms-border-radius: 6px;
+}
+
+.modal-propaganda-container .modal-propaganda-box .btn-modal-propaganda {
+    width: 30px;
+    height: 30px;
+    background-color: #555353;
+    border: none;
+    outline: none;
+    color: #fff;
+    position: absolute;
+    right: -5px;
+    top: -10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    -ms-border-radius: 6px;
+}
+
+.modal-propaganda-container .modal-propaganda-box .btn-modal-propaganda:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+@keyframes modal-propaganda {
+
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60x, 0);
+    }
+
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.modal-propaganda-container {
+    animation: modal-propaganda 2s;
+}
