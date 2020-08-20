@@ -38,7 +38,7 @@
     background-color: #f4f4f4;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
 
     .main-content {
         flex-direction: column;
@@ -46,5 +46,17 @@
 
     .checkout-container {
         margin-top: 6%;
+    }
+
+    .checkout-container .checkout-info .checkout-info-box {
+       font-size: 14px;
+    }
+
+    .forma-pagamento img {
+        width: 100%;
+    }
+
+    .area-title .h1-title {
+        font-size: 2em;
     }
 }

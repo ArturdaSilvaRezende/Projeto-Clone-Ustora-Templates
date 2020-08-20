@@ -69,7 +69,7 @@
 
 }
 
-@media screen and (min-width: 320px) and (max-width: 760px) {
+@media screen and (max-width: 767px) {
 
     main {
         flex-direction: column;
@@ -143,16 +143,26 @@
 
 }
 
-@media screen and (min-width: 320px) and (max-width: 758px) {
+@media screen and (max-width: 767px) {
 
+    /* table content */
     .cart-content-container {
-        flex-direction: column;
-        width: 100%;
+        overflow-x: auto;
     }
+
+    .content-table {
+        padding-top: 20px;
+    }
+
     .cart-content-container .content-table {
         order: 1;
         margin-top: -10px;
     }
+
+    .cart-content-container .content-table .table-produtos .finish div {
+        margin-top: -20px;
+    }
+
     .cart-content-container .content-table .table-produtos tr td {
         font-size: 10px;
     }
@@ -160,7 +170,10 @@
        display: none;
     }
 
-   
+    /* total do carrinho */
+    .title-toais-box {
+        
+    }
 }
 
 /* ====== finalizar-compra-area ====== */
@@ -244,44 +257,45 @@
     width: 270px;
 }
 
-@media screen and (min-width: 759px) and (max-width: 1024px) {
-    
-}
-
-@media screen and (min-width: 320px) and (max-width: 760px) {
+@media screen and (max-width: 767px) {
 
     .totais-carrinho {
         position: relative;
+    }
+
+    .totais-carrinho-container .totais-box {
+        margin-left: -22px;
     }
 
     .totais-carrinho .totais-carrinho-container .totais-box {
         order: 2;
         width: 100%;
         justify-content: space-between;
-        padding-left: 30px;
-        margin: 10% 0;
     }
     .totais-carrinho .totais-carrinho-container .box-subtotal {
         order: 1;
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin-bottom: 16%;
+        margin-bottom: 32%;
         border-bottom: 1px solid #007bff;
         padding-bottom: 20px;
     }
     .totais-carrinho .totais-carrinho-container .box-subtotal .total-carrinho-table{
         margin: 0 auto;
+        width: 80vw;
     }
+
     .totais-carrinho .totais-carrinho-container {
         flex-direction: column;
         margin: 0 auto;
         padding: 0 30px;
     }
 
-    .totais-carrinho .title-toais-box {
+    .totais-carrinho .title-totais-box {
         position: absolute;
-        bottom: 330px;
+        top: 230px;
+        font-size: 14px;
     }
 }
 

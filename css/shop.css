@@ -66,16 +66,22 @@
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 700px) {
+@media screen and (max-width: 700px) {
     .area-shop-container {
-        justify-content: center;
-        width: 100%;
+       
     }
     .area-shop-container .area-shop-box {
-        width: 40%;
-        margin-right: 20px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .area-shop-container .area-shop-box>h5 {
         font-size: 15px;
     }
+    .area-shop-container .area-shop-box p {
+        padding-bottom: 20px;
+        width: 100%;
+    }
+
 }

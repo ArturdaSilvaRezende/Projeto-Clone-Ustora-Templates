@@ -113,7 +113,7 @@ $(document).ready(function () {
 
              //da width de 0px até 600px vai mostrar somente 1
             0: {
-                items: 2
+                items: 1
             },
 
             //da width de 600px até 900px vai mostrar somente 2

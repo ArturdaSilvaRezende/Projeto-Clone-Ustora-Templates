@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    
 }
 
 ul {
@@ -20,6 +21,11 @@ a {
 html, body {
     height: 100%;
 }
+
+body {
+
+}
+
 
 /* =============== área do header superior =============== */
 
@@ -78,17 +84,17 @@ html, body {
 }
 
 @media screen and (max-width: 1024px) {
-    .header-area {
+
+     .nav-container {
+        display: flex;
         flex-direction: column;
-    }
+     }
+
     .header-area .menu-principal ul {
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
     }
-    .header-area .menu-dropdown ul {
-        margin-top: -15px;
-    }
+
     .header-area .menu-dropdown ul .dropdown-control:hover>.dropdown-itens-ul {
         top: 130px;
     }
@@ -101,15 +107,6 @@ html, body {
     }
     .header-area .nav-container .menu-dropdown ul {
         justify-content: center;
-    }
-}
-
-@media screen and (min-width: 250px) and (max-width: 719px) {
-    .header-area .nav-container .menu-dropdown ul {
-        justify-content: center;
-    }
-    .header-area .nav-container .menu-dropdown ul {
-        margin-top: -10px;
     }
 }
 
@@ -173,12 +170,13 @@ html, body {
         margin: 0 30px;
     }
 
+
 }
 
-@media screen and (min-width: 250px) and (max-width: 470px) {
+@media screen and (max-width: 800px) {
 
     .header-container .logo-ustora img {
-        width: 100%;
+        width: 90px;
     }
 
     .header-container .area-cart img {
@@ -186,12 +184,17 @@ html, body {
     }
 
     .header-container .area-cart .cart-title {
-        width: 100%;
+        width: 100px;
         text-align: center;
     }
 
     .header-container .area-cart .cart-title .card-link{
        font-size: 11px;
+    }
+
+    .header-main .header-container .circle {
+        top: -10px;
+        right: -10px;
     }
 
 }
@@ -257,7 +260,7 @@ html, body {
     }
     .nav-main ul {
         margin: 0 auto;
-        flex-wrap: wrap;
+        flex-direction: column;
     }
     .nav-main ul li a {
         display: block;
@@ -278,6 +281,7 @@ html, body {
         font-size: 10px;
         
     }
+
 }
 
 /* =============== área de promoções =============== */
@@ -352,20 +356,21 @@ html, body {
 
 }
 
-@media screen and (min-width: 320px) and (max-width: 700px) {
+@media screen and (max-width: 700px) {
 
     .area-promocoes .container-promocoes {
         flex-wrap: wrap;
     }
     .area-promocoes .container-promocoes .promocao-01, .container-promocoes .promocao-02 {
-        width: 40%;
+        width: 50%;
+        text-align: center;
     }
     .area-promocoes .container-promocoes .promocao-03, .container-promocoes .promocao-04 {
-        width: 40%;
+        width: 50%;
         margin-top: 20px;
     }
     .area-promocoes .promocao-01 p, .promocao-02 p, .promocao-03 p, .promocao-04 p {
-        font-size: 14px;
+        font-size: 10px;
     }
 
 }
@@ -395,7 +400,7 @@ html, body {
 
 .produtos-recentes .item .btn-container button {
     padding: 5px 10px;
-    width: 120px;
+    width: 130px;
     margin-left: 10px;
     font-size: 13px;
     background-color: #5a88ca;
@@ -406,8 +411,14 @@ html, body {
     -moz-border-radius: 7px;
 }
 
-.produtos-recentes .item .btn-container button:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+@media screen and (max-width: 640px) {
+
+    .produtos-recentes h1 {
+        font-size: 20pt;
+    }
+    .produtos-recentes .item .btn-container {
+        width: 230px;
+    }
 }
 
 /* === controladores do carousel === */
@@ -464,9 +475,10 @@ html, body {
 
 }
 
-@media screen and (min-width: 300px) and (max-width: 700px){
+@media screen and (max-width: 700px){
     .produtos-recentes .title-produtos-recentes {
         margin-bottom: 70px;
+        font-size: 17pt;
     }
     .produtos-recentes .buttons-control {
         right: 20px;
@@ -474,12 +486,25 @@ html, body {
     }
 
     .produtos-recentes .item {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
         margin: 0 auto;
     }
 
     .produtos-recentes .img-responsive {
         width: 60%;
     }
+
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-container button {
+        margin-bottom: 10px;
+    }
+
 }
 
 /* =============== área das marcas =============== */
@@ -495,7 +520,7 @@ html, body {
     right: 110px;
 }
 
-@media screen and (min-width: 300px) and (max-width: 700px) {
+@media screen and (max-width: 700px) {
     .area-marcas {
         margin-top: 60px;
     }
@@ -578,14 +603,14 @@ html, body {
         width: 300px;
     }
     .jumbotron-container .jumbotron-box .jumbotron-box-internal p a{
-        font-size: 15px;
+        font-size: 15pt;
     }
     .jumbotron-container .jumbotron-box img {
         width: 50%;
     }
 }
 
-@media screen and (min-width: 300px) and (max-width: 699px) {
+@media screen and (max-width: 699px) {
     .jumbotron-container {
         flex-direction: column;
     }
@@ -598,18 +623,19 @@ html, body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 100%;
         
     }
     .jumbotron-container .jumbotron-box .jumbotron-box-internal p {
-        width: 200px;
-        text-align: center;
+        width: 120px;
+        margin: 0 auto;
     }
     .jumbotron-container .jumbotron-box .jumbotron-box-internal p a{
         font-size: 12px;
         text-align: center;
     }
     .jumbotron-container .jumbotron-box img {
-        width: 40%;
+        width: 30%;
     }
     .jumbotron-container .jumbotron-box .jumbotron-box-internal .text-preco {
         width: 100%;
@@ -622,6 +648,11 @@ html, body {
 
 .footer {
     background-color: #333;
+    margin-top: -32px;
+}
+
+.footer-container {
+    padding: 0 20px 0 20px;
 }
 
 .redes-sociais-footer {
@@ -631,7 +662,6 @@ html, body {
     cursor: pointer;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    margin-right: 20px;
     transition: all 0.5s;
 }
 
@@ -675,11 +705,46 @@ html, body {
 }
 
 @media screen and (max-width: 767px) {
-    .box-internal-footer {
-        padding-bottom: 30px;
+
+    .footer {
+        margin-top: -33px;
     }
-    .footer .footer-container .footer-container-content {
-        margin: 0 30px;
+
+    .footer-container {
+         padding: 0 10px 0 15px;
+    }
+
+    .footer-container-content {
+        text-align: center;
+        width: 100vw;
+        justify-content: center;
+    }
+
+    .footer-container-content h4 {
+        padding: 0 10px 0 15px;
+    }
+    
+    .box-internal-footer {
+        margin: 0 auto
+        width: 100%;
+    }
+
+    .footer-redes-sociais {
+        width: 100px;
+    }
+
+    .box-internal-footer ul,  .footer-redes-sociais ul {
+        display: grid;
+        grid-template-columns: 200px;
+        justify-content: center;
+        margin: 0 0 0 20px;
+    }
+
+}
+
+@media screen and (min-width: 768px)  and (max-width: 1024px) {
+    .footer-container-content {
+        padding: 0 30px;
     }
 }
 
@@ -712,7 +777,7 @@ html, body {
     line-height: 40px;
 }
 
-@media screen and (min-width: 767px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .footer-inferior {
         padding: 10px 0;
     }
@@ -722,13 +787,13 @@ html, body {
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .footer-inferior {
         padding: 10px 0;
     }
     .footer-inferior .box-footer-inferior {
         flex-direction: column;
-        padding: 10px 0 30px 0;
+        padding-left: 17px;
     }
     .footer-inferior .box-footer-inferior p, .footer-inferior .box-footer-inferior a {
         line-height: 20px;
@@ -768,7 +833,7 @@ html, body {
     color: #fff;
 }
 
-@media screen and (min-width: 320px) and (max-width: 992px) {
+@media screen and (max-width: 992px) {
     .menu-active {
         background-color: #5a88ca;
         padding: 0.1px;

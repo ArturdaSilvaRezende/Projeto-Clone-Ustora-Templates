@@ -1,5 +1,4 @@
 /* ================ contaiter img ================ */
-
 body {
     overflow-x: hidden;
 }
@@ -77,7 +76,7 @@ body {
     background-color: #000;
 }
 
-@media screen and (min-width: 780px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     /* contaiter img */
     .single-product-container {
         margin: 0 auto;
@@ -155,27 +154,64 @@ body {
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 779px) {
-    /* contaiter img */
-    .description-product-container {
-        margin-top: 20px;
-    }
-    .single-product-container {
-        margin: 0 auto;
-        margin-top: 70px;
-    }
-    /* área search */
+@media screen and (max-width: 767px) {
+
     main {
+        display: flex;
+        flex-wrap: wrap;
         position: relative;
+
     }
+
+    /* área search */
     #area-search {
         position: absolute;
         top: -30px;
     }
+
+    .form-search input[type=search] {
+        width: 240px;
+    }
+
+    /* aside */
+    .aside-left-container .box-propaganda {
+        width: 100vw;
+    }
+
+    .aside-left {
+        order: 3;
+        margin: -20px 0 30px 0;
+    }
+
+    .description-product-container {
+        order: 2;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .aside-left-container .box-propaganda {
+        width: 100%;
+    }
+
+    /* produto a mostra */
+    .single-product-container {
+        order: 1;
+        padding-top: 45%;
+        width: 100%;
+    }
+
+   
      /*nav-pills*/
 
-     #pills-profile form .pills-box div .label-mail {
-        padding-left: 18px;
+    .pills-box  {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    #pills-home p {
+        width: 80vw;
+        margin-left: -20px;
     }
 
      #pills-profile form {
@@ -197,24 +233,12 @@ body {
         font-size: 13px;
     }
 
-    #pills-profile form .pills-box #cMail {
-        width: 100%;
-        margin-left: 15px;
-    }
-
-    #pills-profile form .pills-box-ranking {
-        width: 100%;
+    .area-title .h1-title {
+        font-size: 25px;
     }
 }
 
 /* ================ produtos relacionados ================ */
-
-@media screen and (min-width: 320px) and (max-width: 779px) {
-    #produtos-relacionados {
-      
-     
-    }
-}
 
 #produtos-relacionados h5 {
     font-size: 14px;
@@ -226,6 +250,23 @@ body {
 
 #produtos-relacionados .btn-container button {
     font-size: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    #produtos-relacionados {
+        padding-bottom: 10%;
+    }
+
+    #produtos-relacionados .produtos-recomendados-carousel .item h5 {
+        font-size: 20px;
+        width: 100vw;
+    }
+
+    #produtos-relacionados .produtos-recomendados-carousel .item {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 /* ================ controladores do input number ================ */
