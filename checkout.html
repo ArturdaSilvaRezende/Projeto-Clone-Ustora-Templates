@@ -266,13 +266,13 @@
 
                 <h3 class="mb-5 mt-5">Detalhes da cobrança</h3>
 
-                <form>
+                <form class="form-checkout" name="formCheckout" id="formCheckout">
 
                     <!-- select-região // nome da empresa-->
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="select-regiao">Região</label>
-                            <select class="text-black-50 p-2 form-control" id="select-regiao">
+                        <div class="form-group col-md-5">
+                            <label for="select-regiao">Região *</label>
+                            <select class="text-black-50 p-2 form-control" id="select-regiao" name="selectRegiao">
                                 <option selected disabled>Escolha uma Opção</option>
                                 <optgroup label="Norte">
                                     <option value="AM">Amazonas</option>
@@ -313,51 +313,51 @@
                                 </optgroup>
                             </select>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="cNomeEmpresa">Nome da Empresa</label>
-                            <input type="text" class="form-control" id="cNomeEmpresa" placeholder="Nome da Empresa">
+                        <div class="form-group col-md-7">
+                            <label for="cNomeEmpresa">Nome da Empresa *</label>
+                            <input type="text" class="form-control" name="nomeEmpresa" id="cNomeEmpresa" placeholder="Nome da Empresa">
                         </div>
                     </div>
 
                     <!-- nome // sobrenome -->
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="cPrimeiroNome">Primeiro Nome</label>
-                            <input type="text" class="form-control" id="cPrimeiroNome" placeholder="Seu primeiro nome"
-                                maxlength="15">
+                            <label for="cPrimeiroNome">Primeiro Nome *</label>
+                            <input type="text" class="form-control" id="cPrimeiroNome" placeholder="Primeiro nome" name="primeiroNome">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="cSobreNome">Sobrenome</label>
-                            <input type="text" class="form-control" id="cSobreNome" placeholder="Sobrenome completo">
+                            <label for="cSobreNome">Sobrenome *</label>
+                            <input type="text" class="form-control" id="cSobreNome" placeholder="Sobrenome completo" name="sobreNome">
                         </div>
                     </div>
 
                     <!-- endereço completo -->
                     <div class="form-group">
-                        <label for="cEndereco">Endereço</label>
-                        <input type="text" class="form-control" id="cEndereco" placeholder="rua/quadra/lote">
+                        <label for="cEndereco">Endereço *</label>
+                        <input type="text" class="form-control" id="cEndereco" placeholder="rua/quadra/lote" name="endereco">
                     </div>
 
                     <div class="form-group">
-                        <label for="cBairro">Bairro </label>
-                        <input type="text" class="form-control" id="cBairro" placeholder="Bairro">
+                        <label for="cBairro">Bairro *</label>
+                        <input type="text" class="form-control" id="cBairro" placeholder="Bairro" name="bairro">
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-8">
-                            <label for="cCidade">Cidade </label>
-                            <input type="text" class="form-control" id="cCidade" placeholder="Cidade">
+                            <label for="cCidade">Cidade *</label>
+                            <input type="text" class="form-control" id="cCidade" placeholder="Cidade" name="cidade">
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="cCep">CEP </label>
-                            <input type="text" class="form-control" id="cCep" placeholder="84673-100">
+                            <label for="cCep">CEP *</label>
+                            <input type="text" class="form-control" id="cCep" placeholder="00000-000" maxlength="9" 
+                            onkeypress="$(this).mask('00.000-000')" name="cep">
                         </div>
                     </div>
 
                     <!-- email -->
                     <div class="form-group">
-                        <label for="cEmail">Email </label>
-                        <input type="text" class="form-control" id="cEmail" placeholder="example@example.com">
+                        <label for="cEmail">Email *</label>
+                        <input type="text" class="form-control" id="cEmail" placeholder="example@example.com" name="email">
                     </div>
 
                     <!-- telefone para contato -->
@@ -365,12 +365,14 @@
 
                         <div class="form-group col-md-6">
                             <label for="cTelefone">Telefone Fixo </label>
-                            <input type="text" class="form-control" id="cTelefone" placeholder="(62)9999-9999">
+                            <input type="text" class="form-control" id="cTelefone" placeholder="(62)9999-9999" 
+                            onkeypress="$(this).mask('(00) 0000-00009')">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="cCelular">Celular </label>
-                            <input type="text" class="form-control" id="cCelular" placeholder="(62)99999-9999">
+                            <input type="text" class="form-control" id="cCelular" placeholder="(62)99999-9999" 
+                            onkeypress="$(this).mask('(00) 0000-00009')">
                         </div>
 
                     </div>
@@ -389,7 +391,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-info mt-3">Finalizar</button>
+                    <button type="submit" class="btn btn-info mt-3 btn-checkout">Finalizar</button>
 
                 </form>
 
@@ -513,6 +515,10 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script><!-- jquery -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script><!-- bootstrap.min.js -->
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script><!-- popper.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script><!-- jquery mask plugin -->
+    <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script><!-- jquery validation -->
+    <script src="node_modules/jquery-validation/dist/localization/messages_pt_BR.js"></script><!-- jquery validation message -->
+    <script src="js/validation.js"></script><!-- chamada jquery validattion -->
     <script src="js/main.js"></script><!-- main.js -->
 </body>
 

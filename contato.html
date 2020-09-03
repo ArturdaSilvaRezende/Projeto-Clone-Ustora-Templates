@@ -16,7 +16,7 @@
         content="Nosso modelo ustora apresenta produtos, novos produtos principais, produtos mais visualizados, produtos mais vendidos são exibidos no controle deslizante e por linha">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Artur">
-
+ 
     <!-- estilo customizado -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/modal.css">
@@ -184,25 +184,24 @@
                 <h4 class="mb-5  text-info text-center">Atendê-lo bem e gerar resultados para a sua empresa são especialidades da Projetual.
                     Entre em contato e venha tomar um café conosco.</h4>
 
-                <form>
+                <form id="formContato">
 
                     <!-- nome // sobrenome -->
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="cPrimeiroNome">* Primeiro Nome</label>
-                            <input type="text" class="form-control" id="cPrimeiroNome" placeholder="Seu primeiro nome"
-                                maxlength="15">
+                            <label for="cPrimeiroNome">Primeiro Nome *</label>
+                            <input type="text" class="form-control" id="cPrimeiroNome" placeholder="Seu primeiro nome" name="primeiroNome">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="cSobreNome">* Sobrenome</label>
-                            <input type="text" class="form-control" id="cSobreNome" placeholder="Sobrenome completo">
+                            <label for="cSobreNome">Sobrenome *</label>
+                            <input type="text" class="form-control" id="cSobreNome" placeholder="Sobrenome completo" name="sobreNome">
                         </div>
                     </div>
 
                     <!-- email -->
                     <div class="form-group">
-                        <label for="cEmail">* Email </label>
-                        <input type="text" class="form-control" id="cEmail" placeholder="example@example.com">
+                        <label for="cEmail">Email *</label>
+                        <input type="text" class="form-control" id="cEmail" placeholder="example@example.com" name="email">
                     </div>
 
                     <!-- telefone para contato -->
@@ -214,7 +213,7 @@
                         </div>
 
                         <div class="form-group col-md-6">
-                            <label for="cCelular">* Celular </label>
+                            <label for="cCelular">Celular</label>
                             <input type="text" class="form-control" id="cCelular" placeholder="(62)99999-9999">
                         </div>
 
@@ -224,12 +223,12 @@
                     <div class="form-row">
 
                         <div class="form-group col-md-6">
-                            <label for="cAssunto">* Assunto </label>
-                            <input type="text" class="form-control" id="cAssunto" placeholder="Assunto/motivo do seu contato">
+                            <label for="cAssunto">Assunto *</label>
+                            <input type="text" class="form-control" id="cAssunto" placeholder="Assunto/motivo do seu contato" name="assunto">
                         </div>
 
                         <div class="form-group col-md-6">
-                            <label for="cMensagem">* Mensagem </label>
+                            <label for="cMensagem">Mensagem *</label>
                             <textarea class="form-control" id="cMensagem" placeholder="Sua mensagem aqui"></textarea>
                         </div>
 
@@ -360,6 +359,9 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script><!-- jquery -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script><!-- bootstrap.min.js -->
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script><!-- popper.min.js -->
+    <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script><!-- jquery validation -->
+    <script src="node_modules/jquery-validation/dist/localization/messages_pt_BR.js"></script><!-- jquery validation message -->
+    <script src="js/validation.js"></script><!-- chamada jquery validattion -->
     <script src="js/main.js"></script><!-- main.js -->
 </body>
 
