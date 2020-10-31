@@ -1,0 +1,39 @@
+.checkout-container {
+    .detalhes-pedido {
+        width: 80%;
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .checkout-container {
+        flex-wrap: wrap;
+       
+        .detalhes-pedido {
+
+            width: 100%;
+            margin-right: 0;
+           
+            .table  {
+                text-align: center;
+                td {
+                    font-size: 12px;
+                }
+    
+            }
+
+        }    
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .checkout-container {
+        flex-wrap: wrap;
+
+        .forma-pagamento {
+            img {
+                width: 60% !important;
+            }
+        }
+    }
+}

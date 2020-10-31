@@ -1,0 +1,30 @@
+.totais-carrinho {
+    display: flex;
+    flex-direction: column;
+    
+    .table {
+        margin-top: -60px; 
+    }
+
+    .totais-carrinho-container {
+       margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .totais-carrinho {
+        display: flex;
+        flex-direction: column;
+        
+        .table {
+            margin-top: -20px;
+            margin-bottom: 20px; 
+        }
+
+        .totais-carrinho-container {
+           margin-bottom: 40px;
+        }
+    }  
+
+}

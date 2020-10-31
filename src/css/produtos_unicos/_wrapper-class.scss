@@ -1,0 +1,36 @@
+.wrapper {
+    display: grid;
+    grid-template-areas: 
+    "single-product-container description-product-container description-product-container"
+    "aside aside aside"
+    "produtos-recentes produtos-recentes produtos-recentes";
+    grid-template-columns: 2fr 1fr 1fr;
+    position: relative;
+    
+    .aside-left {
+        grid-area: aside;
+    } 
+ 
+    .single-product-container {
+        grid-area: single-product-container;
+    }
+
+    .description-product-container {
+        grid-area: description-product-container;
+    }
+
+    .produtos-recentes {
+        grid-area: produtos-recentes;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .wrapper {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "single-product-container"
+        "description-product-container"
+        "aside"
+        "produtos-recentes";
+    }
+}

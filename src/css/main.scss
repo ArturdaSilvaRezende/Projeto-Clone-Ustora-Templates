@@ -1,0 +1,41 @@
+@import '~bootstrap/scss/bootstrap';
+
+//Global files
+@import 'reset';
+
+//owl-carousel files
+@import '../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css';
+@import '../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css';
+
+//index.html files
+@import 'index.html/header-superior';
+@import 'index.html/header-main';
+@import 'index.html/header-inferior';
+@import 'index.html/main_carousel_area';
+@import 'index.html/main_promocao_area';
+@import 'index.html/main_produtos_recentes';
+@import 'index.html/main_area_marcas';
+@import 'index.html/main_mais_vendidos';
+@import 'index.html/btn_back_top';
+@import 'index.html/footer';
+@import 'index.html/footer-inferior';
+
+//produtos-unicos files
+@import 'produtos_unicos/wrapper-class';
+@import 'produtos_unicos/aside-left';
+@import 'produtos_unicos/sing-product';
+@import 'produtos_unicos/description_product';
+
+//carrinho files 
+@import 'carrinho/table-car';
+@import 'carrinho/totais_cart';
+
+//shop files
+@import 'shop/shop';
+
+//checkout files
+@import 'checkout/checkout';
+
+//categoria files
+@import 'categoria/categoria';
+
