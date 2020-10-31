@@ -1,8 +1,8 @@
 {
     "name": "Projeto-Clone-Ustora-Templates",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "![portifolio-02](https://user-images.githubusercontent.com/61878023/90788775-83caa600-e2dc-11ea-8536-5ce1d0d2431b.PNG)",
-    "private": true,
+    "private": true, 
     "scripts": {
         "dev": "webpack --mode development",
         "start": "webpack-dev-server --mode development --open",
