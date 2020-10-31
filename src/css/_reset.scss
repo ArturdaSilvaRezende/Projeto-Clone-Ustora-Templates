@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+header {
+    overflow: hidden;
+}
+
+//Active class
+.menu-active {
+    background-color:#007bff;
+    padding: 10px;
+    display: block;
+    border-radius: 10px;
+    line-height: 3px;
+
+    a {
+        color: #fff !important; 
+        font-weight: 400;
+    }
+}
+
+//Title global
+.area-title {
+    background: url('../assets/crossword.png') repeat #5a88ca;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.area-title .h1-title {
+    padding-top: 10px;
+    color: #fff;
+    font-family: raleway;
+    font-size: 39pt;
+    font-weight: 200;
+}

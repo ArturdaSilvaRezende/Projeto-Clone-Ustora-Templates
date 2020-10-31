@@ -1,0 +1,24 @@
+.footer-inferior {
+
+    .box-footer-inferior {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p + p {
+            margin-left: 20px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .box-footer-inferior {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .box-footer-inferior {
+            text-align: center;
+        }
+    }
+}

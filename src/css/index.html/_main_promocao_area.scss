@@ -1,0 +1,90 @@
+.area-promocoes {
+  background-color: #f4f4f4;
+  
+  @mixin promocaoBgColor($bgColor) {
+    background-color: $bgColor;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 0 10px 0;
+    width: 24%;
+
+    p {
+      font-size: 18px;
+    }
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+
+  .promocao-01 {
+    @include promocaoBgColor(#5a88ca);
+  }
+
+  .promocao-02 {
+    @include promocaoBgColor(#ffd900);
+  }
+
+  .promocao-03 {
+    @include promocaoBgColor(#fa8072);
+  }
+
+  .promocao-04 {
+    @include promocaoBgColor(#4abebd);
+  }
+
+  @media screen and (min-width: 701px) and (max-width: 959px) {
+    .container-promocoes {
+      flex-wrap: wrap;
+
+      %paragrah {
+        font-size: 17px;
+      }
+
+      .promocao-01,
+      .promocao-02 {
+        width: 40%;
+        p {
+            @extend %paragrah;
+        }
+      }
+      .promocao-03,
+      .promocao-04 {
+        width: 40%;
+        margin-top: 20px;
+        p {
+            @extend %paragrah;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .container-promocoes {
+      flex-wrap: wrap;
+
+      %paragrah-small {
+        font-size: 10px;
+      }
+
+      .promocao-01,
+      .promocao-02 {
+        width: 50%;
+        text-align: center;
+        p {
+            @extend %paragrah-small;
+        }
+      }
+      .promocao-03,
+      .promocao-04 {
+        width: 50%;
+        margin-top: 20px;
+        p {
+            @extend %paragrah-small;
+        }
+      }
+    }
+  }
+}
