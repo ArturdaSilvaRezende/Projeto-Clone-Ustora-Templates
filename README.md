@@ -33,6 +33,6 @@ npm install - Para instalar as dependências
 
 #### O site do projeto está hospedado no Vercel, caso você queira fazer uma visita ao site, basta clicar no link abaixo
 
-<a href="projeto-clone-ustora-templates.vercel.app" target="_blank">Projeto Clone Ustora Templates</a>
+<a href="https://projeto-clone-ustora-templates.vercel.app" target="_blank">Projeto Clone Ustora Templates</a>
 
 
