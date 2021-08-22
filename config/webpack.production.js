@@ -15,7 +15,7 @@ const config = {
   devtool: "source-map",
 
   output: {
-    filename: "assets/js/main.js",
+    filename: "main.js",
     path: PATH.dist,
   },
 
@@ -29,6 +29,10 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+      {
         test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
@@ -39,8 +43,13 @@ const config = {
         ],
       },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        test: /\.(eot|svg|ttf|woff|woff2?)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "assets/[name].[ext]",
+          },
+        },
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -48,7 +57,7 @@ const config = {
           loader: "file-loader",
           options: {
             name: "assets/[name].[ext]",
-            publicPath: "../../",
+            //publicPath: "../../",
           },
         },
       },
@@ -57,7 +66,8 @@ const config = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "assets/css/style.css",
+      //filename: "assets/css/style.css",
+      filename: "style.css",
     }),
     new purgeCss({
       paths: glob.sync(`${PATH.dist}/**/*`, { nodir: true }),
