@@ -1,39 +1,75 @@
 .checkout-container {
-    .detalhes-pedido {
-        width: 80%;
-        margin-right: 40px;
+  .detalhes-pedido {
+    width: 80%;
+    margin-right: 40px;
+  }
+
+  .checkout-form {
+    .form-cep {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      input {
+        width: 85%;
+      }
     }
+
+    .form-cep-content {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      label {
+        margin-right: 10px;
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 767px){
-    .checkout-container {
-        flex-wrap: wrap;
-       
-        .detalhes-pedido {
+@media screen and (max-width: 767px) {
+  .checkout-container {
+    flex-wrap: wrap;
 
-            width: 100%;
-            margin-right: 0;
-           
-            .table  {
-                text-align: center;
-                td {
-                    font-size: 12px;
-                }
-    
-            }
+    .detalhes-pedido {
+      width: 100%;
+      margin-right: 0;
 
-        }    
+      .table {
+        text-align: center;
+        td {
+          font-size: 12px;
+        }
+      }
     }
+
+    .checkout-form {
+      .form-cep {
+        margin-bottom: 20px;
+
+        input {
+          width: 70%;
+        }
+      }
+
+      .form-cep-content {
+        label {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .checkout-container {
-        flex-wrap: wrap;
+  .checkout-container {
+    flex-wrap: wrap;
 
-        .forma-pagamento {
-            img {
-                width: 60% !important;
-            }
-        }
+    .forma-pagamento {
+      img {
+        width: 60% !important;
+      }
     }
+  }
 }

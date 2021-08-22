@@ -1,3 +1,5 @@
+@import "../global-style";
+
 .jumbotron {
   .mais-vendidos-title {
     font-family: "Cormorant", serif;
@@ -15,9 +17,7 @@
       background-color: #fff;
       padding: 20px;
       margin-right: 20px;
-      border-radius: 10px;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
+      @include border-radius-global(10px);
       transition: all 1s;
 
       &:hover {
@@ -31,7 +31,9 @@
 
         p {
           font-weight: bolder;
-          font-size: 13px;
+          font-size: 12px;
+          width: 85%;
+          margin: 0 auto;
         }
       }
 

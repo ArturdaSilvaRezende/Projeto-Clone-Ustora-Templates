@@ -157,7 +157,7 @@
                         <li><a href="shop.html">Shopping</a></li>
                         <li><a href="produtos-unicos.html">Produtos Únicos</a></li>
                         <li><a href="carrinho.html">Carrinho</a></li>
-                        <li class="menu-active"><a href="checkout.html">Verificação de Saída</a></li>
+                        <li><a class="menu-active" href="checkout.html">Verificação de Saída</a></li>
                         <li><a href="categoria.html">Categoria</a></li>
                         <li><a href="contato.html">Contato</a></li>
                     </ul>
@@ -204,46 +204,29 @@
 
             </table>
 
-            <!-- transferência bancária área -->
-            <div class="form-group mt-4">
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        Transferência bancária direta
-                    </label>
-                </div>
+            <form class="d-flex flex-column mt-4">
 
-                <p class="text-justify mt-2">
-                    Faça seu pagamento diretamente em nossa conta bancária. Por favor, use o seu ID do pedido como
-                    referência de pagamento. Seu pedido não será enviado até que os fundos sejam liberados em nossa
-                    conta.
-                </p>
+                <!-- transferência bancária área -->
+                <label class="form-check-label" for="gridCheck">
+                    <input class="form-check-input" type="radio" id="gridCheck" name="pay"
+                        value="Transferência bancária direta" required>
+                    Transferência bancária direta
+                </label>
 
-            </div>
-
-            <!-- pagamento em cheque área -->
-            <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="pagCheque">
+                <!-- pagamento em cheque área -->
                 <label class="form-check-label" for="pagCheque">
+                    <input class="form-check-input" type="radio" id="pagCheque" name="pay" value="Pagamento em Cheque">
                     Pagamento em Cheque
                 </label>
-            </div>
 
-            <!-- paypal área -->
-            <div class="d-flex align-items-center d-flex flex-wrap forma-pagamento">
+                <!-- paypal -->
+                <label class="form-check-label" for="paypal">
+                    <input class="form-check-input" type="radio" id="paypal" name="pay" value="PayPal">
+                    PayPal
+                </label>
 
-                <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" id="paypal">
-                    <label class="form-check-label" for="paypal">
-                        PayPal
-                    </label>
-                </div>
-  
-                <img class="ml-3 m-auto d-block w-100" src="assets/cartoes-img.png" alt="Cartoes de Créditos">
-
-            </div>
-
+            </form>
         </section><!-- detalhes do pedido área -->
 
         <section class="checkout-container">
@@ -265,6 +248,18 @@
                 <h3 class="mb-5 mt-5">Detalhes da cobrança</h3>
 
                 <form class="form-checkout" name="formCheckout" id="formCheckout">
+
+                    <!-- cep -->
+                    <div class="form-cep">
+                        <div class="form-cep-content">
+                            <label for="cep">CEP *</label>
+                            <input type="text" class="form-control" id="cep" placeholder="00000-000" maxlength="9"
+                                name="cep">
+                        </div>
+                        <div class="form-cep-enviar">
+                            <button type="button" class="btn btn-info btn-cep">Procurar</button>
+                        </div>
+                    </div>
 
                     <!-- select-região // nome da empresa-->
                     <div class="form-row">
@@ -313,7 +308,8 @@
                         </div>
                         <div class="form-group col-md-7">
                             <label for="cNomeEmpresa">Nome da Empresa *</label>
-                            <input type="text" class="form-control" name="nomeEmpresa" id="cNomeEmpresa" placeholder="Nome da Empresa">
+                            <input type="text" class="form-control" name="nomeEmpresa" id="cNomeEmpresa"
+                                placeholder="Nome da Empresa">
                         </div>
                     </div>
 
@@ -321,41 +317,44 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="cPrimeiroNome">Primeiro Nome *</label>
-                            <input type="text" class="form-control" id="cPrimeiroNome" placeholder="Primeiro nome" name="primeiroNome">
+                            <input type="text" class="form-control" id="cPrimeiroNome" placeholder="Primeiro nome"
+                                name="primeiroNome">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="cSobreNome">Sobrenome *</label>
-                            <input type="text" class="form-control" id="cSobreNome" placeholder="Sobrenome completo" name="sobreNome">
+                            <input type="text" class="form-control" id="cSobreNome" placeholder="Sobrenome completo"
+                                name="sobreNome">
                         </div>
                     </div>
 
                     <!-- endereço completo -->
                     <div class="form-group">
-                        <label for="cEndereco">Endereço *</label>
-                        <input type="text" class="form-control" id="cEndereco" placeholder="rua/quadra/lote" name="endereco">
+                        <label for="logradouro">Endereço *</label>
+                        <input type="text" class="form-control" id="logradouro" placeholder="rua/quadra/lote"
+                            name="endereco">
                     </div>
 
                     <div class="form-group">
-                        <label for="cBairro">Bairro *</label>
-                        <input type="text" class="form-control" id="cBairro" placeholder="Bairro" name="bairro">
+                        <label for="bairro">Bairro *</label>
+                        <input type="text" class="form-control" id="bairro" placeholder="Bairro" name="bairro">
                     </div>
 
                     <div class="form-row">
-                        <div class="form-group col-md-8">
-                            <label for="cCidade">Cidade *</label>
-                            <input type="text" class="form-control" id="cCidade" placeholder="Cidade" name="cidade">
+                        <div class="form-group col-md-9">
+                            <label for="localidade">Cidade *</label>
+                            <input type="text" class="form-control" id="localidade" placeholder="Cidade" name="cidade">
                         </div>
-                        <div class="form-group col-md-4">
-                            <label for="cCep">CEP *</label>
-                            <input type="text" class="form-control" id="cCep" placeholder="00000-000" maxlength="9" 
-                            onkeypress="$(this).mask('00.000-000')" name="cep">
+                        <div class="form-group col-md-3">
+                            <label for="uf">Estado *</label>
+                            <input type="text" class="form-control" id="uf" placeholder="Cidade" name="cidade">
                         </div>
                     </div>
 
                     <!-- email -->
                     <div class="form-group">
                         <label for="cEmail">Email *</label>
-                        <input type="text" class="form-control" id="cEmail" placeholder="example@example.com" name="email">
+                        <input type="text" class="form-control" id="cEmail" placeholder="example@example.com"
+                            name="email">
                     </div>
 
                     <!-- telefone para contato -->
@@ -363,14 +362,12 @@
 
                         <div class="form-group col-md-6">
                             <label for="cTelefone">Telefone Fixo </label>
-                            <input type="text" class="form-control" id="cTelefone" placeholder="(62)9999-9999" 
-                            onkeypress="$(this).mask('(00) 0000-00009')">
+                            <input type="text" class="form-control" id="cTelefone" placeholder="(62)9999-9999">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="cCelular">Celular </label>
-                            <input type="text" class="form-control" id="cCelular" placeholder="(62)99999-9999" 
-                            onkeypress="$(this).mask('(00) 0000-00009')">
+                            <input type="text" class="form-control" id="cCelular" placeholder="(62)99999-9999">
                         </div>
 
                     </div>
@@ -403,7 +400,7 @@
         <img src="assets/top.png" alt="voltar_top_icone">
     </div> <!-- botão back-top -->
 
-    <footer class="footer pt-3">
+    <footer class="footer">
 
         <div class="footer-container">
 
@@ -464,28 +461,28 @@
                     <p class="text-white text-justify">Assine nossa newsletter e receba ofertas exclusivas que você não
                         encontrará em nenhum outro lugar diretamente na sua caixa de entrada!</p>
 
-                    <form class="form-inline flex-column">
-                        <input class="form-control mr-sm-2 w-100" type="search" placeholder="Digite seu e-mail"
-                            aria-label="Search">
-                        <button class="btn btn-outline-info mt-3 mr-auto" type="submit">Se Inscrever</button>
+                    <form class="d-flex">
+                        <input class="form-control mr-sm-2 w-75" type="search" placeholder="Digite seu e-mail"
+                            aria-label="Search" role>
+                        <button class="btn btn-outline-info" type="submit">Enviar</button>
                     </form>
 
                     <ul class="mt-4 rounded d-flex text-center">
 
-                        <li class="redes-sociais-footer w-25">
-                            <a href="" class="d-block"><i class="fab fa-facebook-f"></i></a>
+                        <li class="redes-sociais-footer">
+                            <a href="#" class="d-block" aria-label="facebook"><i class="fab fa-facebook-f"></i></a>
                         </li>
 
-                        <li class="redes-sociais-footer w-25">
-                            <a href="" class="d-block"><i class="fab fa-twitter"></i></a>
+                        <li class="redes-sociais-footer">
+                            <a href="#" class="d-block" aria-label="twitter"><i class="fab fa-twitter"></i></a>
                         </li>
 
-                        <li class="redes-sociais-footer w-25">
-                            <a href="" class="d-block "><i class="fab fa-youtube"></i></a>
+                        <li class="redes-sociais-footer">
+                            <a href="#" class="d-block " aria-label="youtube"><i class="fab fa-youtube"></i></a>
                         </li>
 
-                        <li class="redes-sociais-footer w-25">
-                            <a href="" class="d-block"><i class="fab fa-linkedin"></i></a>
+                        <li class="redes-sociais-footer">
+                            <a href="#" class="d-block" aria-label="linkedin"><i class="fab fa-linkedin"></i></a>
                         </li>
 
                     </ul>
@@ -500,7 +497,7 @@
 
             <div class="container">
                 <div class="box-footer-inferior">
-                    <p class="mt-3 text-light">© 2020 uCommerce.</p>
+                    <p class="mt-3 text-light">© 2021 uCommerce.</p>
                     <p class="mt-3  text-light">Todos os direitos reservados.</p>
                     <p class="mt-3"><a class="text-primary" href="#">freshDesignweb.com</a></p>
                 </div>

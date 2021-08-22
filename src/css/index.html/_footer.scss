@@ -1,16 +1,18 @@
+@import "../global-style";
+
 .footer {
   background-color: #333;
+  padding: 35px;
   .footer-container {
     padding: 0 20px 0 20px;
 
     .redes-sociais-footer {
       background-color: #5a88ca;
-      padding: 10px 15px;
-      border-radius: 10px;
       cursor: pointer;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
+      padding: 5px;
       transition: all 0.5s;
+      width: 50px;
+      @include border-radius-global(10px);
 
       &:last-child {
         margin-right: 0;
@@ -28,10 +30,14 @@
         background-color: rgba(0, 0, 0, 0.6);
       }
     }
+
+    .redes-sociais-footer + .redes-sociais-footer {
+      margin-left: 5px;
+    }
   }
 
   button[type="submit"] {
-    width: 150px;
+    width: 90px;
   }
 
   .box-internal-footer {

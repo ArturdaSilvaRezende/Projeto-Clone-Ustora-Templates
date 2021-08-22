@@ -51,21 +51,21 @@
           &:hover > .dropdown-itens-ul {
             display: block;
             position: absolute;
-            top: 40px;
+            top: 30px;
           }
         }
       }
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       .nav-container {
         flex-direction: column;
-      
+
         .menu-principal {
           flex-wrap: wrap;
           justify-content: center;
+
           ul {
-            width: 100vw;
             display: flex;
             justify-content: center;
           }
@@ -78,11 +78,7 @@
           ul {
             display: flex;
             justify-content: center;
-            .dropdown-control {
-              &:hover > .dropdown-itens-ul {
-                top: 30px;
-              }
-            }
+            width: 100%;
           }
         }
       }

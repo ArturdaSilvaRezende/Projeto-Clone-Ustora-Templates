@@ -1,0 +1,33 @@
+//border radius global
+@mixin border-radius-global($property) {
+  -webkit-border-radius: $property;
+  -moz-border-radius: $property;
+  -ms-border-radius: $property;
+  -o-border-radius: $property;
+  border-radius: $property;
+}
+
+//Active class
+.menu-active {
+  background-color: #b2b6ba;
+  @include border-radius-global(5px);
+  color: #fff !important;
+  display: block;
+  text-align: center;
+  line-height: 3px;
+}
+
+//Title global
+.area-title {
+  background: url("../assets/crossword.png") repeat #5a88ca;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.area-title .h1-title {
+  padding-top: 10px;
+  color: #fff;
+  font-family: raleway;
+  font-size: 39pt;
+  font-weight: 200;
+}
