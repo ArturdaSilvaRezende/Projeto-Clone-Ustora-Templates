@@ -1,54 +1,63 @@
+@import "../global-style";
+
 .area-marcas {
-    margin-bottom: 2%;
-    position: relative;
+  margin: 3% 0 2% 0;
+  position: relative;
 
-    %btn-control-marks {
-        padding: 5px 10px;
-        background-color: #fa8072;
-        color: #fff;
-        border: none;
-        font-weight: bold;
-        outline: none;
-        border-radius: 7px;
-        -webkit-border-radius: 7px;
-        -moz-border-radius: 7px;
-        cursor: pointer;
+  %btn-control-marks {
+    padding: 5px 10px;
+    background-color: #fa8072;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    outline: none;
+    @include border-radius-global(7px);
+    cursor: pointer;
 
-        &:hover {
-            background-color: #333;
-            color: #fff;
-            transition: 0.3s ease-in;
-        }
+    &:hover {
+      background-color: #333;
+      color: #fff;
+      transition: 0.3s ease-in;
+    }
+  }
+
+  .carousel-marcas {
+    padding-top: 2%;
+  }
+
+  .buttons-control-marks {
+    position: absolute;
+    top: -25px;
+    right: 125px;
+    z-index: 999;
+
+    .btn-prev {
+      @extend %btn-control-marks;
     }
 
+    .btn-next {
+      @extend %btn-control-marks;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
     .buttons-control-marks {
-        position: absolute;
-        top: -5px;
-        right: 120px;
-        z-index: 999;
-        
-        .btn-prev {
-            @extend %btn-control-marks;
-        }
-
-        .btn-next {
-            @extend %btn-control-marks;
-        }
+      position: absolute;
+      top: -5px;
+      right: 45px;
     }
+  }
 
-    @media screen and (min-width: 768px) and (max-width: 1024px){
-        .buttons-control-marks {
-            position: absolute;
-            top: -5px;
-            right: 45px; 
-        }
+  @media screen and (max-width: 767px) {
+    .carousel-marcas {
+      padding-top: 4%;
     }
-
-    @media screen and (max-width: 767px) {
-        .buttons-control-marks {
-            position: absolute;
-            top: -5px;
-            right: 20px;
-        }
+    .buttons-control-marks {
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 170px;
     }
+  }
 }
